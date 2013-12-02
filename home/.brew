@@ -1,0 +1,56 @@
+#!/bin/bash
+
+sysctl -n hw.model | sed 's/[0-99][,][0-9]//'
+
+iMac
+MacBookAir
+Macmini
+
+#sudo -v # ask for password only at the beginning
+
+brew update
+brew upgrade
+brew tap phinze/homebrew-cask
+
+brew install bash-completion
+brew install brew-cask
+brew install brew-gem
+brew install gfortran
+brew install gnuplot --cairo --latex --pdf --qt --with-x --wx
+brew install grc
+brew install htop-osx
+brew install ssh-copy-id
+brew install tree
+brew install wget
+
+brew gem lunchy
+brew gem homesick
+
+brew cask install airserver
+brew cask install appdelete
+brew cask install boxer
+brew cask install dropbox
+brew cask install evernote
+brew cask install firefox
+brew cask install github
+brew cask install gog-downloader
+brew cask install handbrake
+brew cask install iterm2
+brew cask install keka
+brew cask install kindle
+brew cask install libreoffice
+brew cask install lyx
+brew cask install mactex
+brew cask install max
+brew cask install parallels-8
+brew cask install pcalc
+brew cask install rname
+brew cask install silverlight
+brew cask install skim
+brew cask install sublime-text
+brew cask install transmission
+brew cask install truecrypt
+brew cask install vlc
+brew cask install xld
+brew cask install xquartz
+brew cask install zotero
