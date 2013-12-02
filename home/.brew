@@ -21,6 +21,7 @@ brew install grc
 brew install htop-osx
 brew install ssh-copy-id
 brew install tree
+brew install vim --override-system-vi
 brew install wget
 
 brew gem lunchy
