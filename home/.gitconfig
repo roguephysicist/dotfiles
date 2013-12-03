@@ -1,0 +1,5 @@
+[user]
+	name = Sean Anderson
+	email = sean.martin.anderson@gmail.com
+[core]
+	excludesfile = /Users/sma/.gitignore
