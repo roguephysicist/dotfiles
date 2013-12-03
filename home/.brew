@@ -1,15 +1,21 @@
 #!/usr/bin/env bash
 
+# Let's get this party started
 brew update
 brew upgrade
 brew tap phinze/homebrew-cask
+brew tap homebrew/dupes
 
+# My favorite tools
+brew install ack
 brew install bash-completion
 brew install brew-cask
 brew install brew-gem
+brew install coreutils
 brew install gfortran
 brew install gnuplot --cairo --latex --pdf --qt --with-x --wx
 brew install grc
+brew install homebrew/dupes/grep
 brew install htop-osx
 brew install ssh-copy-id
 brew install tree
@@ -17,9 +23,12 @@ brew install vim --override-system-vi
 brew install wget
 brew install zsh
 
+# A few gems: lunchy is for creating tasks with launchd 
+#			  homesick is for dotfile management
 brew gem lunchy
 brew gem homesick
 
+# Installing binary software in casks
 brew cask install airserver
 brew cask install appdelete
 brew cask install boxer
