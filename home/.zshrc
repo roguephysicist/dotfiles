@@ -45,4 +45,4 @@ plugins=(git brew rsync)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/Users/sma/anaconda/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
+export PATH=/usr/local/bin:$(brew --prefix coreutils)/libexec/gnubin:/Users/sma/anaconda/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin

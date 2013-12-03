@@ -1,12 +1,4 @@
-#!/bin/bash
-
-sysctl -n hw.model | sed 's/[0-99][,][0-9]//'
-
-iMac
-MacBookAir
-Macmini
-
-#sudo -v # ask for password only at the beginning
+#!/usr/bin/env bash
 
 brew update
 brew upgrade
@@ -23,6 +15,7 @@ brew install ssh-copy-id
 brew install tree
 brew install vim --override-system-vi
 brew install wget
+brew install zsh
 
 brew gem lunchy
 brew gem homesick

@@ -7,6 +7,7 @@ source "`brew --prefix grc`/etc/grc.bashrc"
 
 # for homewbrew
 export PATH=/usr/local/bin:$PATH
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
  . $(brew --prefix)/etc/bash_completion
