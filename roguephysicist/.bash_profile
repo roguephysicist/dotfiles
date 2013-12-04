@@ -7,7 +7,7 @@ done
 unset file
 
 # Generic colouriser for popular commands
-source "`brew --prefix grc`/etc/grc.bashrc"
+#source "`brew --prefix grc`/etc/grc.bashrc"
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
