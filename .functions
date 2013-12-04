@@ -1,0 +1,13 @@
+# plotex - for creating plots in pdf from gnuplot epslatex files
+function plotex() {
+	local name=`basename $1 .gp`
+	gnuplot $1
+	epstopdf $name-inc.eps
+	pdflatex $name.tex
+	rm $name-inc.eps
+	rm $name-inc.pdf
+	rm $name.aux
+	rm $name.log
+	rm $name.tex
+	clear
+}

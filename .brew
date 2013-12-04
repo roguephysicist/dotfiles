@@ -20,6 +20,7 @@ brew install tree
 brew install vim --override-system-vi
 brew install wget
 brew install zsh
+brew install z
 
 # A few gems: lunchy is for creating tasks with launchd 
 #			  homesick is for dotfile management
