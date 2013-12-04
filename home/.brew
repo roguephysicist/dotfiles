@@ -55,3 +55,6 @@ brew cask install vlc
 brew cask install xld
 brew cask install xquartz
 brew cask install zotero
+
+# Clean up after yourself
+brew cleanup -s

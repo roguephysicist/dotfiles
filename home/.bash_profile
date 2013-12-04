@@ -1,27 +1,29 @@
-export CLICOLOR=1
-export GREP_OPTIONS='--color=auto'
-export LSCOLORS=Exfxcxdxbxegedabagacad
-export GNUTERM=wxt
-#export PATH=/Users/sma/dev/scripts:$PATH
+# Load the shell dotfiles, and then some:
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.extra can be used for other settings you don’t want to commit.
+for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file
+
+# Generic colouriser for popular commands
 source "`brew --prefix grc`/etc/grc.bashrc"
 
-# for homewbrew
-export PATH=/usr/local/bin:$PATH
-export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
- . $(brew --prefix)/etc/bash_completion
-fi
+# Append to the Bash history file, rather than overwriting it
+shopt -s histappend
 
-# added by Anaconda 1.5.1 installer
-export PATH="/Users/sma/anaconda/bin:$PATH"
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell
 
-alias plotex="CASE=`basename $1 .gp`; gnuplot $1; epstopdf $CASE-inc.eps; pdflatex $CASE.tex; rm $CASE-inc.eps; rm $CASE-inc.pdf; rm $CASE.aux; rm $CASE.log; rm $CASE.tex; clear"
-alias medumount="sshfs medusa:/home/sma /Users/sma/sshfs/medusa/home/sma; sshfs medusa:/homee/sma /Users/sma/sshfs/medusa/homee/sma; sshfs medusa:/homeib/sma /Users/sma/sshfs/medusa/homeib/sma"
-alias namback="rsync -az --progress --exclude-from '.rsync_exclude' Documents namira:backup/;\
-	rsync -az --progress --exclude-from '.rsync_exclude' Games namira:backup/;\
-	rsync -az --progress --exclude-from '.rsync_exclude' Movies namira:backup/;\
-	rsync -az --progress --exclude-from '.rsync_exclude' Music namira:backup/;\
-	rsync -az --progress --exclude-from '.rsync_exclude' Parallels namira:backup/;\
-	rsync -az --progress --exclude-from '.rsync_exclude' Pictures namira:backup/;\
-	rsync -az --progress --exclude-from '.rsync_exclude' dev namira:backup/"
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh
+
+# Add `killall` tab completion for common apps
+complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
+
+# If possible, add tab completion for many more commands
+[ -f $(brew --prefix)/etc/bash_completion ] && source $(brew --prefix)/etc/bash_completion
+[ -f /etc/bash_completion ] && source /etc/bash_completion
