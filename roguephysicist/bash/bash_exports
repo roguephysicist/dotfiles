@@ -1,0 +1,13 @@
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+
+# Make some commands not show up in history
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
+# Always enable colored `grep` output
+#colored shit needed?
+#export GREP_OPTIONS="--color=auto"
+#export CLICOLOR=1
+#export LSCOLORS=Exfxcxdxbxegedabagacad
