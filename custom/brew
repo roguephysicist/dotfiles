@@ -51,6 +51,7 @@ binaries=(airserver
 		lyx
 		mactex
 		max
+		mou
 		parallels-8
 		pcalc
 		rname
