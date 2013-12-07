@@ -1,6 +1,8 @@
 # homebrew (can be ignored on Linux)
 export PATH=/usr/local/bin:$PATH
+
 # homebrew GNU Coreutils
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+
 # anaconda python distribution
 export PATH=$HOME/anaconda/bin:$PATH
