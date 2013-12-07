@@ -1,13 +1,10 @@
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,aliases,exports,bash_prompt,bash_exports,bash_aliases,functions,extra}; do
+for dotfile in ~/.{path,aliases,exports,bash_prompt,bash_exports,bash_aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
-unset file
-
-# Generic colouriser for popular commands
-#source "`brew --prefix grc`/etc/grc.bashrc"
+unset dotfile
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob

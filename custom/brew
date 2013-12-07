@@ -12,7 +12,7 @@ apps=(ack
 	  bash-completion
 	  brew-cask
 	  brew-gem
-	  coreutils
+	  #coreutils
 	  gfortran
 	  gnuplot --cairo --latex --pdf --qt --with-x --wx
 	  grc
@@ -73,4 +73,4 @@ done
 
 # Clean up after yourself
 brew cleanup -s
-rm -rf brew --cache
+#rm -rf brew --cache
