@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Install newest version of zsh with homebrew
-brew install zsh
+# Install newest version of zsh with homebrew if not already installed
+if [ ! -e /usr/local/bin/zsh ]; then
+	brew install zsh
+fi
 
 # Starting zsh
 /bin/zsh

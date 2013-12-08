@@ -21,7 +21,8 @@ apps=(ack
 	  tree
 	  vim --override-system-vi
 	  wget
-	  z)
+	  z
+	  zsh)
 
 printf "Installing my favorite tools with brew.\n"
 for app in ${apps[*]}; do
