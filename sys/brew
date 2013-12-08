@@ -21,8 +21,8 @@ apps=(ack
 	  tree
 	  vim --override-system-vi
 	  wget
-	  zsh
 	  z)
+
 printf "Installing my favorite tools with brew.\n"
 for app in ${apps[*]}; do
 	brew install $app
@@ -64,6 +64,7 @@ binaries=(airserver
 		xld
 		xquartz
 		zotero)
+
 printf "\nOk, now we're going to install some binaries with brew-cask."
 for binary in ${binaries[*]}; do
 	read -p "Do you want to install $binary? (y/n)"
