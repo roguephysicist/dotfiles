@@ -2,6 +2,7 @@
 
 # Execute this script with /bin/zsh!
 
+# Only for OS X and homebrew
 if [[ `uname` == Darwin ]]; then
     # Install newest version of zsh with homebrew if not already installed
     if [ ! -e /usr/local/bin/zsh ]; then
@@ -13,6 +14,10 @@ if [[ `uname` == Darwin ]]; then
     
     # Changing default shell to new zsh installed by homebrew
     chsh -s /usr/local/bin/zsh
+fi
+
+if [[ `hostname` == medusa ]]; then
+    chsh -s /bin/zsh
 fi
 
 # Cloning my prezto git repository to $HOME/.zprezto
