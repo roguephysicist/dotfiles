@@ -31,9 +31,9 @@ done
 
 # A few gems: lunchy is for creating tasks with launchd 
 #			  homesick is for dotfile management
-printf "\nInstalling a few ruby gems with brew.\n"
-brew gem lunchy
-brew gem homesick
+#printf "\nInstalling a few ruby gems with brew.\n"
+#brew gem lunchy
+#brew gem homesick
 
 # Installing binary software in casks
 binaries=(airserver
