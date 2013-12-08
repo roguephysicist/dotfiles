@@ -1,8 +1,8 @@
 #!/bin/bash
 # modified from https://github.com/paulmillr/dotfiles
 
-bashfiles=( $HOME/Developer/dotfiles/bash/* )
-customfiles=( $HOME/Developer/dotfiles/custom/* )
+bashfiles=( $PWD/bash/* )
+customfiles=( $PWD/custom/* )
 
 link() {
     from="$1"
