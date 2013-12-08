@@ -1,12 +1,11 @@
-#!/bin/bash
+#!/bin/zsh
+
+# Execute this script with /bin/zsh!
 
 # Install newest version of zsh with homebrew if not already installed
 if [ ! -e /usr/local/bin/zsh ]; then
 	brew install zsh
 fi
-
-# Starting zsh
-/bin/zsh
 
 # Cloning my prezto git repository to $HOME/.zprezto
 git clone --recursive https://github.com/roguephysicist/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
@@ -18,7 +17,26 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 
 # Adding homebrew installed version to /etc/shells
-sudo printf "/usr/local/bin/zsh" >> /etc/shells
+printf "/usr/local/bin/zsh\n" | sudo tee -a /etc/shells
 
 # Changing default shell to new zsh installed by homebrew
 chsh -s /usr/local/bin/zsh
+
+# Creating symlinks for files in custom/
+customfiles=( $HOME/Developer/dotfiles/custom/* )
+
+link() {
+    from="$1"
+    to="$2"
+    echo "Linking '$from' to '$to'"
+    rm -f "$to"
+    ln -s "$from" "$to"
+}
+
+for location in "${customfiles[@]}"; do
+    file="${location##*/}"
+    file="${file%.sh}"
+    link "$location" "$HOME/.$file"
+done
+
+printf "All done! Restart your terminal.\n"
