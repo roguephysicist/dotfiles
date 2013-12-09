@@ -6,6 +6,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
 # Updating and adding taps
 brew update
 brew tap phinze/homebrew-cask
+brew tap caskroom/versions
 
 
 # A few gems: lunchy is for creating tasks with launchd 
@@ -37,7 +38,7 @@ binaries=(airserver
 		rname
 		silverlight
 		skim
-		sublime-text
+		sublime-text-3
 		transmission
 		truecrypt
 		vlc
