@@ -7,27 +7,6 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
 brew update
 brew tap phinze/homebrew-cask
 
-# My favorite tools
-apps=(ack
-	  bash-completion
-	  brew-cask
-	  brew-gem
-	  #coreutils
-	  gfortran
-	  gnuplot --cairo --latex --pdf --qt --with-x --wx
-	  grc
-	  htop-osx
-	  ssh-copy-id
-	  tree
-	  vim --override-system-vi
-	  wget
-	  z
-	  zsh)
-
-printf "Installing my favorite tools with brew.\n"
-for app in ${apps[*]}; do
-	brew install $app
-done
 
 # A few gems: lunchy is for creating tasks with launchd 
 #			  homesick is for dotfile management
@@ -66,12 +45,34 @@ binaries=(airserver
 		xquartz
 		zotero)
 
-printf "\nOk, now we're going to install some binaries with brew-cask."
+printf "\nFirst, let's install some binaries with brew-cask."
+brew install brew-cask
 for binary in ${binaries[*]}; do
 	read -p "Do you want to install $binary? (y/n)"
 	if [[ $REPLY =~ ^[Yy]$ ]]; then 
 		brew cask install $binary
 	fi
+done
+
+# My favorite tools
+apps=(ack
+	  bash-completion
+	  brew-gem
+	  #coreutils
+	  gfortran
+	  gnuplot --cairo --latex --pdf --qt --with-x --wx
+	  grc
+	  htop-osx
+	  ssh-copy-id
+	  tree
+	  vim --override-system-vi
+	  wget
+	  z
+	  zsh)
+
+printf "Installing my favorite tools with brew.\n"
+for app in ${apps[*]}; do
+	brew install $app
 done
 
 # Clean up after yourself
