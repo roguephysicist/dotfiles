@@ -48,7 +48,8 @@ binaries=(airserver
 printf "\nFirst, let's install some binaries with brew-cask."
 brew install brew-cask
 for binary in "${binaries[*]}"; do
-	read -p "Do you want to install $binary? (y/n)"
+	printf "Do you want to install $binary? (y/n)\n"
+	read REPLY
 	if [[ $REPLY =~ ^[Yy]$ ]]; then 
 		brew cask install $binary
 	fi
