@@ -47,7 +47,7 @@ binaries=(airserver
 
 printf "\nFirst, let's install some binaries with brew-cask."
 brew install brew-cask
-for binary in ${binaries[*]}; do
+for binary in "${binaries[*]}"; do
 	read -p "Do you want to install $binary? (y/n)"
 	if [[ $REPLY =~ ^[Yy]$ ]]; then 
 		brew cask install $binary
@@ -71,7 +71,7 @@ apps=(ack
 	  zsh)
 
 printf "Installing my favorite tools with brew.\n"
-for app in ${apps[*]}; do
+for app in "${apps[*]}"; do
 	brew install $app
 done
 
