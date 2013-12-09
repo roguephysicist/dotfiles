@@ -20,6 +20,11 @@ if [[ `hostname` == medusa ]]; then
     chsh -s /bin/zsh
 fi
 
+if [[ `hostname` == namira ]]; then
+    printf "/usr/bin/zsh\n" | sudo tee -a /etc/shells
+    chsh -s /usr/bin/zsh
+fi
+
 # Cloning my prezto git repository to $HOME/.zprezto
 git clone --recursive https://github.com/roguephysicist/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
