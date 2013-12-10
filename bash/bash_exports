@@ -6,8 +6,8 @@ export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
-# Always enable colored `grep` output
-#colored shit needed?
-#export GREP_OPTIONS="--color=auto"
+# Colors, BITCH!
+export TERM=xterm-256color
+export GREP_OPTIONS="--color=auto"
 #export CLICOLOR=1
 #export LSCOLORS=Exfxcxdxbxegedabagacad
