@@ -18,3 +18,4 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Sets default terminal for Gnuplot to "qt" (while wxt is broken)
 export GNUTERM=qt
+
