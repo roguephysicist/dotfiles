@@ -9,6 +9,12 @@ fi
 # anaconda python distribution
 export PATH=$HOME/anaconda/bin:$PATH
 
+# MacTex binaries
+export PATH=/usr/texbin:$PATH
+
+# XQuartz binaries
+export PATH=/opt/X11/bin:$PATH
+
 # MEDUSA: new paths for new tiniba (git:work)
 export TINIBA=$HOME/tiniba
 export PATH="$TINIBA/clustering:$TINIBA/utils:$PATH"
