@@ -10,19 +10,21 @@ if [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; the
 	#export PATH=$PATH:$TINIBAC:$TINIBAU:.
 fi
 
-# XQuartz binaries
-export PATH=/opt/X11/bin:$PATH
+if [[ `uname` == Darwin ]]; then
+	# XQuartz binaries
+	export PATH=/opt/X11/bin:$PATH
+	
+	# MacTex binaries
+	export PATH=/usr/texbin:$PATH
 
-# MacTex binaries
-export PATH=/usr/texbin:$PATH
+	if [[ -e /usr/local/bin/brew ]]; then
+    	# path for homebrew 
+    	export PATH=/usr/local/bin:$PATH
+
+    	# homebrew GNU Coreutils
+    	#export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+	fi
+fi
 
 # anaconda python distribution
 export PATH=$HOME/anaconda/bin:$PATH
-
-if [[ -e /usr/local/bin/brew ]]; then
-    # path for homebrew 
-    export PATH=/usr/local/bin:$PATH
-
-    # homebrew GNU Coreutils
-    #export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
-fi
