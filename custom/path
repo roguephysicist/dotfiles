@@ -1,3 +1,24 @@
+if [[ `hostname` == medusa && `hostname` == hexa* && `hostname` == quad* ]]; then
+	# MEDUSA: new paths for new tiniba (git:work)
+	export TINIBA=$HOME/tiniba
+	export PATH="$TINIBA/clustering:$TINIBA/utils:$PATH"
+	
+	# MEDUSA: old paths for old tiniba (git:original)
+	#export TINIBA=$HOME/tiniba/ver2.0
+	#export TINIBAC=$TINIBA/clustering/itaxeo
+	#export TINIBAU=$TINIBA/utils
+	#export PATH=$PATH:$TINIBAC:$TINIBAU:.
+fi
+
+# XQuartz binaries
+export PATH=/opt/X11/bin:$PATH
+
+# MacTex binaries
+export PATH=/usr/texbin:$PATH
+
+# anaconda python distribution
+export PATH=$HOME/anaconda/bin:$PATH
+
 if [[ -e /usr/local/bin/brew ]]; then
     # path for homebrew 
     export PATH=/usr/local/bin:$PATH
@@ -5,22 +26,3 @@ if [[ -e /usr/local/bin/brew ]]; then
     # homebrew GNU Coreutils
     #export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 fi
-
-# anaconda python distribution
-export PATH=$HOME/anaconda/bin:$PATH
-
-# MacTex binaries
-export PATH=/usr/texbin:$PATH
-
-# XQuartz binaries
-export PATH=/opt/X11/bin:$PATH
-
-# MEDUSA: new paths for new tiniba (git:work)
-export TINIBA=$HOME/tiniba
-export PATH="$TINIBA/clustering:$TINIBA/utils:$PATH"
-
-# MEDUSA: old paths for old tiniba (git:original)
-#export TINIBA=$HOME/tiniba/ver2.0
-#export TINIBAC=$TINIBA/clustering/itaxeo
-#export TINIBAU=$TINIBA/utils
-#export PATH=$PATH:$TINIBAC:$TINIBAU:.
