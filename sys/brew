@@ -33,6 +33,8 @@ binaries=(airserver
 		mactex
 		max
 		mou
+		openemu
+		pandoc
 		parallels-8
 		pcalc
 		rname
