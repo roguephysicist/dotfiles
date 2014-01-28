@@ -6,6 +6,9 @@ for dotfile in ~/.{path,aliases,exports,bash_prompt,bash_exports,bash_aliases,fu
 done
 unset dotfile
 
+# Sets tab titles to hostname
+export PROMPT_COMMAND='echo -ne "\033]0;$HOSTNAME\007"'
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
