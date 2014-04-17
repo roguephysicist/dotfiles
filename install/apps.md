@@ -19,6 +19,7 @@ with Homebrew -- you can look at the seperate brew file in this repo for that.
 **Homebrew** should be installed first.
 
 * [Homebrew](http://brew.sh)
+* [Anaconda](https://store.continuum.io/cshop/anaconda/)
 * [pdftk](http://www.pdflabs.com/tools/pdftk-server/)
 
 Sublime Text has a command line interface called `subl`. You can use this from
