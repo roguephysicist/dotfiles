@@ -10,3 +10,11 @@ ln -sfh $PWD/symlinked/shell-extra $HOME/.extra
 ln -sfh $PWD/symlinked/shell-functions $HOME/.functions
 ln -sfh $PWD/symlinked/shell-path $HOME/.path
 ln -sfh $PWD/symlinked/todotxt-todo.cfg $HOME/.todo.cfg
+
+if [ $1 == 'bash' ]; then
+    ln -sfh $PWD/symlinked/bash-aliases $HOME/.bash_aliases
+    ln -sfh $PWD/symlinked/bash-exports $HOME/.bash_exports
+    ln -sfh $PWD/symlinked/bash-profile $HOME/.bash_profile
+    ln -sfh $PWD/symlinked/bash-prompt $HOME/.bash_prompt
+    ln -sfh $PWD/symlinked/bash-bashrc $HOME/.bashrc
+fi
