@@ -32,8 +32,8 @@ These are required installs for any kind of dev work.
 command line tools
 * [XQuartz](https://xquartz.macosforge.org/landing/)
 
-You also need to install the command line tools for Xcode. These can be
-installed from the Xcode preferences window.
+The command line tools for Xcode can be installed from the Xcode preferences
+window.
 
 Homebrew
 --------
