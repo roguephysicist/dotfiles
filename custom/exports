@@ -1,6 +1,6 @@
 # Make vim the default editor
-export EDITOR="vim"
-export VISUAL='vim'
+export EDITOR='subl -w'
+export VISUAL='subl -w'
 export PAGER='less'
 
 # Prefer US English and use UTF-8
@@ -14,7 +14,7 @@ export LESS_TERMCAP_md="$ORANGE"
 export MANPAGER="less -X"
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+# export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Sets default terminal for Gnuplot to "wxt"
 export GNUTERM=wxt
