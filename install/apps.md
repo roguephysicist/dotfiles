@@ -56,7 +56,7 @@ Boilerplate
 -----------
 Boilerplate apps are my standard set of apps that I use on every computer.
 **Github for Mac** should be installed first, although it's likely you are
-already aware of that it since you are viewing this document.
+already aware of that if you read the sections above.
 
 | Application    | Download From                                                    | Application    | Download From                                                    |
 |----------------|:----------------------------------------------------------------:|----------------|:----------------------------------------------------------------:|
