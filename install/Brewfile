@@ -1,0 +1,30 @@
+# Brewfile
+# run this by running 'brew bundle path/to/Brewfile'
+
+# Always update and upgrade installed packages first
+update
+upgrade
+
+# These are my favorite tools to use from the command line. I love it!!
+install ack 
+install bash-completion
+install brew-gem
+install curl
+install exiftool
+install gfortran
+install gifsicle
+install gnuplot --latex -with-x --cairo --pdf --wx --qt
+install grc
+install htop-osx
+install poppler
+install ssh-copy-id
+install todo-txt
+install tree
+install vim
+install w3m
+install wget
+install z
+install zsh
+
+# Clean up after yourself
+cleanup
