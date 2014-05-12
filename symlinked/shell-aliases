@@ -3,3 +3,6 @@ alias medumount="sshfs medusa:/home/sma /Users/sma/sshfs/medusa/home/sma; sshfs 
 
 # namback - rsync command to back up my user data to my server
 alias namback="rsync -az --delete --exclude-from '.rsync_exclude' Documents namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Games namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Movies namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Music namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Pictures namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Developer namira:backup/"
+
+# matteo - for using matteo's version of abinit
+alias matteo="/home/sma/abinit-5.7.3/src/main/abinip"
