@@ -8,6 +8,6 @@ alias namback="rsync -az --delete --exclude-from '.rsync_exclude' Documents nami
 alias abetsf="/home/sma/abinit-5.7.3_etsf/src/main/abinip"
 
 # dp - for using the DP software created by the ETSF
-alias dp="/home/sma/dpforexc/bin/dp"
-alias broad="/home/sma/dpforexc/bin/broad"
+alias dp="/home/sma/dpforexc/src/dp-5.3.99"
+alias broad="/home/sma/dpforexc/tool/broad"
 
