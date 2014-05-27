@@ -1,13 +1,16 @@
 if [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then
-	# MEDUSA: new paths for new tiniba (git:work)
+	# MEDUSA: new paths for new tiniba (git:master)
 	export TINIBA=$HOME/tiniba
 	export PATH="$TINIBA/clustering:$TINIBA/utils:$PATH"
+
+	new paths for ETSF software binaries
+	export PATH="$HOME/bin/bin:$PATH"
 	
-	# MEDUSA: old paths for old tiniba (git:original)
-	#export TINIBA=$HOME/tiniba/ver2.0
-	#export TINIBAC=$TINIBA/clustering/itaxeo
-	#export TINIBAU=$TINIBA/utils
-	#export PATH=$PATH:$TINIBAC:$TINIBAU:.
+	## MEDUSA: old paths for old tiniba (git:original)
+	# export TINIBA=$HOME/tiniba/ver2.0
+	# export TINIBAC=$TINIBA/clustering/itaxeo
+	# export TINIBAU=$TINIBA/utils
+	# export PATH=$PATH:$TINIBAC:$TINIBAU:.
 fi
 
 if [[ `uname` == Darwin ]]; then
