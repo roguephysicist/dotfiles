@@ -1,3 +1,4 @@
+#!/bin/bash
 # A very direct script for linking files into your Home directory.
 # Add files as needed.
 shell="$1"
