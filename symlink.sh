@@ -13,7 +13,7 @@ ln -sf $PWD/symlinked/shell-functions $HOME/.functions
 ln -sf $PWD/symlinked/shell-path $HOME/.path
 ln -sf $PWD/symlinked/todotxt-todo.cfg $HOME/.todo.cfg
 
-if [ "$shell" == "bash" ]; then
+if [[ "$shell" == "bash" ]]; then
     ln -sf $PWD/symlinked/bash-aliases $HOME/.bash_aliases
     ln -sf $PWD/symlinked/bash-exports $HOME/.bash_exports
     ln -sf $PWD/symlinked/bash-profile $HOME/.bash_profile
