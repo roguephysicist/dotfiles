@@ -16,6 +16,7 @@ install gifsicle
 install gnuplot --latex -with-x --cairo --pdf --wx --qt
 install grc
 install htop-osx
+install legit
 install poppler
 install ssh-copy-id
 install todo-txt
