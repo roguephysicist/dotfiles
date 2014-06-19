@@ -13,7 +13,7 @@ install curl
 install exiftool
 install gfortran
 install gifsicle
-install gnuplot --latex -with-x --cairo --pdf --wx --qt
+install gnuplot --latex --with-x --cairo --pdf --wx --qt
 install grc
 install htop-osx
 install legit
