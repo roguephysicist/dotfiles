@@ -1,8 +1,9 @@
 # medumount - for mounting remote hard drives from medusa, requires fuse for os x
-alias medumount="sshfs medusa:/home/sma /Users/sma/sshfs/medusa/home/sma; sshfs medusa:/homee/sma /Users/sma/sshfs/medusa/homee/sma; sshfs medusa:/homeib/sma /Users/sma/sshfs/medusa/homeib/sma"
+#alias medumount="sshfs medusa:/home/sma /Users/sma/sshfs/medusa/home/sma; sshfs medusa:/homee/sma /Users/sma/sshfs/medusa/homee/sma; sshfs medusa:/homeib/sma /Users/sma/sshfs/medusa/homeib/sma"
 
-# namback - rsync command to back up my user data to my server
-alias namback="rsync -az --delete --exclude-from '.rsync_exclude' Documents namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Games namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Movies namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Music namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Pictures namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Developer namira:backup/"
+# rsync commands for backing up computers to different servers
+alias slvrback="rsync -az --delete --exclude-from '.rsync_exclude' Documents namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Games namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Movies namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Music namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Pictures namira:backup/; rsync -az --delete --exclude-from '.rsync_exclude' Developer namira:backup/"
+alias meduback="rsync -az --delete --progress --exclude-from '~/.rsync-exclude' --exclude "/.*" --exclude "eigen_*" --exclude "me_*" --exclude "*_DS_*" --exclude "symmetries/" --exclude "logfiles/" --exclude "*_check/" /home/sma/ aida:/data2/sma/backup; rsync -az --delete --progress --exclude-from '~/.rsync-exclude' /homee/sma/bundles aida:/data2/sma/backup"
 
 ## abetsf - for using matteo's version of abinit
 # alias abetsf="/home/sma/abinit-5.7.3_etsf/src/main/abinip"
