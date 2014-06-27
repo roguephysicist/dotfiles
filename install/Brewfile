@@ -27,5 +27,8 @@ install wget
 install z
 install zsh
 
+# Using brew-gem to install ruby gems
+gem jekyll
+
 # Clean up after yourself
-cleanup
+cleanup -s
