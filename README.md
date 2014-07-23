@@ -3,9 +3,11 @@ Dotfiles
 
 WIP
 -------
+```
 git submodule add https://github.com/roguephysicist/vimrc.git
 git submodule add https://github.com/roguephysicist/prezto.git
 git submodule update --init --recursive
+```
 
 Install
 -------
