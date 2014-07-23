@@ -1,6 +1,12 @@
 Dotfiles
 ========
 
+WIP
+-------
+git submodule add https://github.com/roguephysicist/vimrc.git
+git submodule add https://github.com/roguephysicist/prezto.git
+git submodule update --init --recursive
+
 Install
 -------
 You can install these dotfiles using curl or by cloning the repo and executing from there.
