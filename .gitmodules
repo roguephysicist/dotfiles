@@ -1,6 +1,3 @@
 [submodule "prezto"]
 	path = prezto
 	url = https://github.com/roguephysicist/prezto.git
-[submodule "vimrc"]
-	path = vimrc
-	url = https://github.com/roguephysicist/vimrc.git
