@@ -4,8 +4,8 @@ Dotfiles
 WIP
 -------
 ```
-git submodule add https://github.com/amix/vimrc.git
-git submodule add https://github.com/roguephysicist/prezto.git
+git clone https://github.com/amix/vimrc.git
+git clone https://github.com/roguephysicist/prezto.git
 git submodule update --init --recursive
 ```
 
