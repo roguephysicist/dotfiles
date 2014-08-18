@@ -6,6 +6,7 @@ shell="$1"
 
 ln -sf $PWD/symlinked/git-gitconfig $HOME/.gitconfig
 ln -sf $PWD/symlinked/git-gitignore $HOME/.gitignore
+ln -sf $PWD/symlinked/octave-octaverc $HOME/.octaverc
 ln -sf $PWD/symlinked/rsync-rsync_exclude $HOME/.rsync_exclude
 ln -sf $PWD/symlinked/shell-aliases $HOME/.aliases
 ln -sf $PWD/symlinked/shell-exports $HOME/.exports
