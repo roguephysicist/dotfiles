@@ -68,8 +68,8 @@ already aware of that if you read the sections above.
 | ReadKit        | [Mac App Store](http://readkitapp.com)                  			| AppDelete      | [Website      ](http://www.reggieashworth.com/appdelete)         |
 | Evernote       | [Mac App Store](http://evernote.com/evernote/)                   | R-Name         | [Website      ](https://www.macupdate.com/app/mac/12259/r-name)  |
 | Fantastical    | [Website      ](https://flexibits.com/fantastical)               | VLC            | [Website      ](http://www.videolan.org/vlc/index.html)          |
-| Ulysses III    | [Mac App Store](http://www.ulyssesapp.com)                       | Firefox        | [Website      ](http://www.mozilla.org/en-US/firefox/new/)       |
-| Mindnode Pro   | [Mac App Store](https://mindnode.com)                            |																					|
+| Ulysses III    | [Mac App Store](http://www.ulyssesapp.com)                       | Spotify        | [Website      ](https://www.spotify.com/download/mac/)           |
+| Mindnode Pro   | [Mac App Store](https://mindnode.com)                            | Firefox        | [Website      ](http://www.mozilla.org/en-US/firefox/new/)		|
 
 Command Line
 ------------
