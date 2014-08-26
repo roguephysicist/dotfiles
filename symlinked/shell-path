@@ -1,7 +1,7 @@
 if [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then
 	# MEDUSA: new paths for new tiniba (git:master)
 	export TINIBA=$HOME/tiniba
-	export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:$PATH"
+	export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:.:$PATH"
 
 	# new paths for ETSF software binaries
 	export PATH="$HOME/bin/bin:$PATH"
