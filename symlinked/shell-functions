@@ -14,3 +14,8 @@ function plotex() {
 		clear
 	done
 }
+
+# secret - for mounting encrypted drives via the command line
+function secret() {
+	hdiutil attach $1 -stdinpass
+}
