@@ -1,18 +1,15 @@
 # plotex - for creating plots in pdf from gnuplot epslatex files
 function plotex() {
-	tex=(`grep "set output" $1 | awk -F\" '{print $(NF-1)}'`)
-	for file in "${tex[@]}"; do
-		local name=`basename $file .tex`
-		gnuplot $1
-		epstopdf $name-inc.eps
-		pdflatex $file
-		rm $name-inc.eps
-		rm $name-inc.pdf
-		rm $name.aux
-		rm $name.log
-		rm $file
-		clear
-	done
+	local tex=`grep "set output" $1 | awk -F\" '{print $(NF-1)}'`
+	local name=`basename $tex .tex`
+	gnuplot $1
+	pdflatex $tex
+	rm $name-inc.eps
+	rm $name-inc-eps-converted-to.pdf
+	rm $name.aux
+	rm $name.log
+	rm $tex
+	clear
 }
 
 # secret - for mounting encrypted drives via the command line
