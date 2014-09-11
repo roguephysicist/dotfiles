@@ -1,6 +1,9 @@
 # for syncing brew installations between macs using dropbox
 alias brewS="/Users/sma/Developer/dotfiles/install/brew-sync.sh"
 
+# for aliasing hub to git
+eval "$(hub alias -s)"
+
 # medumount - for mounting remote hard drives from medusa, requires fuse for os x
 #alias medumount="sshfs medusa:/home/sma /Users/sma/sshfs/medusa/home/sma; sshfs medusa:/homee/sma /Users/sma/sshfs/medusa/homee/sma; sshfs medusa:/homeib/sma /Users/sma/sshfs/medusa/homeib/sma"
 
