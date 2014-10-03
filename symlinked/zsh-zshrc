@@ -1,0 +1,69 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+##### Extra Sourcing #####
+
+## Generic Colorizer
+source "`brew --prefix`/etc/grc.bashrc"
+## Z - Directory access via frecency
+source "`brew --prefix`/etc/profile.d/z.sh"
+
+##### Paths #####
+
+## Homebrew
+export PATH=/usr/local/bin:$PATH
+## XQuartz
+export PATH=/opt/X11/bin:$PATH
+## MacTex
+export PATH=/usr/texbin:$PATH
+## Homebrew GNU Coreutils
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+## Anaconda Python Distribution
+export PATH=$HOME/anaconda/bin:$PATH
+
+##### Exports #####
+
+## Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
+## Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+## Link Homebrew casks in `/Applications` rather than `~/Applications`
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+## Sets default terminal for Gnuplot to "wxt"
+export GNUTERM=wxt
+
+##### Aliases #####
+
+## for aliasing hub to git
+eval "$(hub alias -s)"
+
+##### Functions #####
+
+## plotex - for creating plots in pdf from gnuplot epslatex files
+function plotex() {
+    local tex=`grep "set output" $1 | awk -F\" '{print $(NF-1)}'`
+    local name=`basename $tex .tex`
+    gnuplot $1
+    pdflatex $tex
+    rm $name-inc.eps
+    rm $name-inc-eps-converted-to.pdf
+    rm $name.aux
+    rm $name.log
+    rm $tex
+    clear
+}
+
+## secret - for mounting encrypted drives via the command line
+function secret() {
+    hdiutil attach $1 -stdinpass
+}

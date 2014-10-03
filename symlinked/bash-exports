@@ -11,3 +11,33 @@ export TERM=xterm-256color
 export GREP_OPTIONS="--color=auto"
 #export CLICOLOR=1
 #export LSCOLORS=Exfxcxdxbxegedabagacad
+
+# Make vim the default editor
+export EDITOR='vim'
+export VISUAL='subl -w'
+export PAGER='less'
+
+# Prefer US English and use UTF-8
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Sets default terminal for Gnuplot to "wxt"
+export GNUTERM=wxt
+
+if [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then
+    # TINIBA
+    export TINIBA=$HOME/tiniba/
+    export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:.:$PATH"
+
+    # My binaries
+    export PATH="$HOME/bin/bin:$PATH"
+fi
+
+# Anaconda Python Distribution
+export PATH=$HOME/anaconda/bin:$PATH
