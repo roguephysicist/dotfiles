@@ -63,13 +63,15 @@ already aware of that if you read the sections above.
 | 1Password 4    | [Website      ](https://agilebits.com/onepassword)               | Skim           | [Website      ](http://skim-app.sourceforge.net)                 |
 | Sublime Text 3 | [Website      ](http://www.sublimetext.com)                      | Zotero         | [Website      ](https://www.zotero.org)                          |
 | iTerm 2        | [Website      ](http://www.iterm2.com/)                          | Dropbox        | [Website      ](https://www.dropbox.com)                         |
+| Alfred 2       | [Website      ](http://www.alfredapp.com)                        | Spectacle      | [Website      ](http://spectacleapp.com)                         |
 | Github for Mac | [Website      ](https://mac.github.com)                          | Daisydisk      | [Mac App Store](http://www.daisydiskapp.com)                     |
 | PCalc 4        | [Mac App Store](http://www.pcalc.com)                            | Keka           | [Website      ](http://www.kekaosx.com/en/)                      |
 | ReadKit        | [Mac App Store](http://readkitapp.com)                  			| AppDelete      | [Website      ](http://www.reggieashworth.com/appdelete)         |
 | Evernote       | [Mac App Store](http://evernote.com/evernote/)                   | R-Name         | [Website      ](https://www.macupdate.com/app/mac/12259/r-name)  |
 | Fantastical    | [Website      ](https://flexibits.com/fantastical)               | VLC            | [Website      ](http://www.videolan.org/vlc/index.html)          |
 | Ulysses III    | [Mac App Store](http://www.ulyssesapp.com)                       | Spotify        | [Website      ](https://www.spotify.com/download/mac/)           |
-| Mindnode Pro   | [Mac App Store](https://mindnode.com)                            | Firefox        | [Website      ](http://www.mozilla.org/en-US/firefox/new/)		|
+| Mindnode Pro   | [Mac App Store](https://mindnode.com)                            | Firefox        | [Website      ](http://www.mozilla.org/en-US/firefox/new/)       |
+| nvALT          | [Website      ](http://brettterpstra.com/projects/nvalt/)        |                |                                                                  |
 
 Command Line
 ------------
@@ -77,7 +79,7 @@ These apps are only used in the terminal. This list does not include Homebrew
 or programs installed with Homebrew. Read the preceeding section for more info
 on that. 
 
-* [Anaconda](https://store.continuum.io/cshop/anaconda/)
+* [Anaconda Python Distribution](https://store.continuum.io/cshop/anaconda/)
 * [pdftk](http://www.pdflabs.com/tools/pdftk-server/)
 
 Sublime Text has a command line interface called `subl`. You can use this from
@@ -91,4 +93,5 @@ MacTeX
 ------
 I typically install the full [MacTeX distribution](http://tug.org/mactex/) on
 all my computers. This can be skipped if you aren't planning on using LaTeX.
-It is a big (and often slow) download.
+It is a big (and often slow) download. It might be worth reconsidering in favor
+of the much slimmer BasicTeX.

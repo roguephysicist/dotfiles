@@ -6,24 +6,28 @@ update
 upgrade
 
 # These are my favorite tools to use from the command line. I love it!!
-install ack 
+install ack
+install bash
 install bash-completion
-install brew-gem
+#install brew-gem
+install coreutils
 install curl
 install exiftool
-install gfortran
+install findutils
+install gcc
 install gifsicle
 install gnuplot --latex --with-x --cairo --pdf --wx --qt
 install grc
+install hub
 install htop-osx
-install legit
 install poppler
-install ssh-copy-id
+#install ssh-copy-id
 install todo-txt
 install tree
 install vim
 install w3m
 install wget
+install xz
 install z
 install zsh
 
