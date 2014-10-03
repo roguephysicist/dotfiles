@@ -38,15 +38,13 @@ fi
 # Prezto (https://github.com/sorin-ionescu/prezto)
 if [ ! -d "$PREZTO_DIR" ]; then
     echo "Installing Prezto."
-    git clone --recursive https://github.com/roguephysicist/prezto.git "$PREZTO_DIR"
+    git clone --recursive git@github.com:roguephysicist/prezto.git "$PREZTO_DIR"
 
     setopt EXTENDED_GLOB
     for rcfile in "$HOME"/.zprezto/runcoms/^README.md(.N); do
         ln -s "$rcfile" "$HOME/.${rcfile:t}"
     done
 else
-
-
 
 
 for location in $(find home -name '.*'); do
