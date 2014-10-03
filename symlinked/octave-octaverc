@@ -1,2 +1,0 @@
-# For using Gnuplot's qt terminal
-setenv("GNUTERM","qt")
