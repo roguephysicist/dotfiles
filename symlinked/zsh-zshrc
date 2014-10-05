@@ -55,11 +55,11 @@ function plotex() {
     local name=`basename $tex .tex`
     gnuplot $1
     pdflatex $tex
-    rm $name-inc.eps
-    rm $name-inc-eps-converted-to.pdf
-    rm $name.aux
-    rm $name.log
-    rm $tex
+    rm -f $name-inc.eps
+    rm -f $name-inc-eps-converted-to.pdf
+    rm -f $name.aux
+    rm -f $name.log
+    rm -f $tex
     clear
 }
 
