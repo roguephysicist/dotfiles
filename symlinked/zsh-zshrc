@@ -12,27 +12,27 @@ fi
 
 ##### Extra Sourcing #####
 
-#if [[ `uname` == Darwin ]]; then
+if [[ `uname` == Darwin ]]; then
     source "/usr/local/etc/grc.bashrc"     ## Generic Colorizer
     source "/usr/local/etc/profile.d/z.sh" ## Z - Directory access via frecency
-#fi
+fi
 
 ##### Paths #####
 
 ## Paths for OS X
-#if [[ `uname` == Darwin ]]; then
+if [[ `uname` == Darwin ]]; then
     # export PATH=/usr/local/bin:$PATH ## Homebrew (already included in prezto)
     # export PATH=/opt/X11/bin:$PATH   ## XQuartz (already included in prezto)
     # export PATH=/usr/texbin:$PATH    ## MacTex (already included in prezto)
     export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH ## Homebrew GNU Coreutils
     export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
-#elif [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
-#   # TINIBA
-#   export TINIBA=$HOME/tiniba/
-#   export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:.:$PATH"
-#   # My binaries
-#   export PATH="$HOME/bin/bin:$PATH"
-#fi
+elif [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
+   # TINIBA
+   export TINIBA=$HOME/tiniba/
+   export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:.:$PATH"
+   # My binaries
+   export PATH="$HOME/bin/bin:$PATH"
+fi
 
 ## Anaconda Python Distribution
 export PATH=$HOME/anaconda/bin:$PATH
