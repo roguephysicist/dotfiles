@@ -51,7 +51,7 @@ export GNUTERM=wxt
 ##### Aliases #####
 
 ## for aliasing hub to git
-eval "$(hub alias -s)"
+#eval "$(hub alias -s)"
 
 ##### Functions #####
 
