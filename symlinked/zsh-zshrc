@@ -60,6 +60,7 @@ function plotex() {
     local tex=`grep "set output" $1 | awk -F\" '{print $(NF-1)}'`
     local name=`basename $tex .tex`
     gnuplot $1
+    epstopdf $name-inc.eps
     pdflatex $tex
     rm -f $name-inc.eps
     rm -f $name-inc-eps-converted-to.pdf
