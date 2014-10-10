@@ -27,13 +27,13 @@ if [[ `uname` == Darwin ]]; then
     export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH ## Homebrew GNU Coreutils
     export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 elif [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
-   # TINIBA
-   export TINIBA=$HOME/tiniba/
-   export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:.:$PATH"
-   # My binaries
-   export PATH="$HOME/bin/bin:$PATH"
-   # FPATH for Intel Fortran compiler
-   #export FPATH="/opt/intel/composer_xe_2011_sp1.6.233/mkl/include:/home/sma/.zprezto/modules/helper/functions:/home/sma/.zprezto/modules/completion/external/src:/home/sma/.zprezto/modules/utility/functions:/home/sma/.zprezto/modules/git/functions:/home/sma/.zprezto/modules/prompt/functions:/usr/share/zsh/site-functions:/usr/share/zsh/4.3.10/functions"
+    # TINIBA
+    export TINIBA=$HOME/tiniba/
+    export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:.:$PATH"
+    # My binaries
+    export PATH="$HOME/bin/bin:$PATH"
+    # FPATH for Intel Fortran compiler
+    #export FPATH="/home/sma/.zprezto/modules/helper/functions:/home/sma/.zprezto/modules/completion/external/src:/home/sma/.zprezto/modules/utility/functions:/home/sma/.zprezto/modules/git/functions:/home/sma/.zprezto/modules/prompt/functions:/opt/intel/composer_xe_2011_sp1.6.233/mkl/include:/usr/local/share/zsh/site-functions:/usr/local/share/zsh/5.0.6/functions"
 fi
 
 ## Anaconda Python Distribution

@@ -6,5 +6,6 @@ ln -sf $PWD/zshrc           $HOME/.zshrc
 ln -sf $PWD/gitconfig       $HOME/.gitconfig
 ln -sf $PWD/gitignore       $HOME/.gitignore
 ln -sf $PWD/todo.cfg        $HOME/.todo.cfg
+ln -sf $PWD/screenrc        $HOME/.screenrc
 #ln -sf $PWD/bashrc          $HOME/.bashrc
 #ln -sf $PWD/rsync_exclude   $HOME/.rsync_exclude
