@@ -1,0 +1,21 @@
+export CLICOLOR=1
+export LANG="en_US.UTF-8"
+
+alias ls="ls --color=auto"
+alias ll="ls -alh"
+
+export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ " # nice, simple prompt
+export EDITOR="vim"
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"' # sets tab and window titles
+
+if [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then
+    # TINIBA
+    export TINIBA=$HOME/tiniba/
+    export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:.:$PATH"
+
+    # My binaries
+    export PATH="$HOME/bin/bin:$PATH"
+
+    # Anaconda Python Distribution
+    export PATH=$HOME/anaconda/bin:$PATH
+fi
