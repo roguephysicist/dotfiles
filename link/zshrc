@@ -65,7 +65,7 @@ function plotex() {
     epstopdf $name-inc.eps
     pdflatex $tex
     rm -f $name-inc.eps
-    rm -f $name-inc-eps-converted-to.pdf
+    rm -f $name-inc.pdf
     rm -f $name.aux
     rm -f $name.log
     rm -f $tex
