@@ -57,11 +57,12 @@ export GNUTERM=wxt
 
 ##### Functions #####
 
-## plotex - for creating plots in pdf from gnuplot epslatex files
+## gitignore.io - generates awesome gitignores with gi command
 function gi() {
     curl -L -s https://www.gitignore.io/api/$@ ;
 }
 
+## plotex - for creating plots in pdf from gnuplot epslatex files
 function plotex() {
     local tex=`grep "set output" $1 | awk -F\" '{print $(NF-1)}'`
     local name=`basename $tex .tex`
