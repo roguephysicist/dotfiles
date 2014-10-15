@@ -8,6 +8,7 @@ You can install these dotfiles using curl or by cloning the repo and executing f
 Features
 --------
 ```
+defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
 defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder
 ```
