@@ -71,7 +71,7 @@ already aware of that if you read the sections above.
 | Fantastical    | [Website      ](https://flexibits.com/fantastical)               | VLC            | [Website      ](http://www.videolan.org/vlc/index.html)          |
 | Ulysses III    | [Mac App Store](http://www.ulyssesapp.com)                       | Spotify        | [Website      ](https://www.spotify.com/download/mac/)           |
 | Mindnode Pro   | [Mac App Store](https://mindnode.com)                            | Firefox        | [Website      ](http://www.mozilla.org/en-US/firefox/new/)       |
-| nvALT          | [Website      ](http://brettterpstra.com/projects/nvalt/)        |                |                                                                  |
+| nvALT          | [Website      ](http://brettterpstra.com/projects/nvalt/)        |                | [Website      ](https://www.virtualbox.org)                      |
 
 Command Line
 ------------
@@ -81,6 +81,7 @@ on that.
 
 * [Anaconda Python Distribution](https://store.continuum.io/cshop/anaconda/)
 * [pdftk](http://www.pdflabs.com/tools/pdftk-server/)
+* [Vagrant](https://www.vagrantup.com)
 
 Sublime Text has a command line interface called `subl`. You can use this from
 the command line by symlinking as follows:
@@ -95,3 +96,21 @@ I typically install the full [MacTeX distribution](http://tug.org/mactex/) on
 all my computers. This can be skipped if you aren't planning on using LaTeX.
 It is a big (and often slow) download. It might be worth reconsidering in favor
 of the much slimmer BasicTeX.
+
+System Fonts
+-------
+Excellent free fonts. These are mostly OpenType and support advanced features.
+
+* (EB Garamond)         [http://www.georgduffner.at/ebgaramond/]
+* (Essays 1743)         [http://www.thibault.org/fonts/essays/]
+* (Forum)               [http://www.fontsquirrel.com/fonts/forum]
+* (Gentium Plus)        [http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=Gentium_download]
+* (Inconsolata)         [http://levien.com/type/myfonts/inconsolata.html]
+* (Lato)                [http://www.latofonts.com/lato-free-fonts/]
+* (Linux Biolinum)      [http://www.linuxlibertine.org/index.php?id=1&L=1]
+* (Linux Libertine)     [http://www.linuxlibertine.org/index.php?id=1&L=1]
+* (Roboto)              [http://www.fontsquirrel.com/fonts/roboto]
+* (Sina Nova)           [http://www.fontsquirrel.com/fonts/sina-nova]
+* (Source Code Pro)     [https://github.com/adobe-fonts/source-code-pro]
+* (Source Sans Pro)     [https://github.com/adobe-fonts/source-sans-pro]
+* (Source Serif Pro)    [https://github.com/adobe-fonts/source-serif-pro]
