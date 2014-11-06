@@ -16,6 +16,7 @@ install exiftool
 install findutils
 install gcc
 install gifsicle
+install git
 install gnuplot --latex --with-x --cairo --pdf --wx --qt
 install grc
 install hub

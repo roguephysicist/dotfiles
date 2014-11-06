@@ -8,15 +8,12 @@ Install First
 There are a few of these apps that should be installed first so that everything
 goes smoothly afterwards. These apps are:
 
-1. Github for Mac (with command line tools)
-2. Xcode (with command line tools)
-3. XQuartz
-4. Homebrew and tools in Brewfile
+1. Xcode (with command line tools)
+2. XQuartz
+3. Homebrew and tools in Brewfile
+4. Github for Mac (with command line tools)
 
-Github is installed first to get a fresh install of Git. There are other ways
-you can go about this but this is easiest.
-
-Xcode follows to get all the necessary compilers for installing programs with
+Xcode provides all the necessary compilers for installing programs with
 Homebrew. Read more in the Utilities section below.
 
 XQuartz is mostly optional but some programs have some X11 dependencies that
@@ -41,12 +38,15 @@ Homebrew
 
 `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
 
-in the terminal. Xcode, Git, and their respective command line tools are
+in the terminal. Xcode and its respective command line tools are
 required for installing Homebrew. Included in this directory is a Brewfile
 that automatically installs a bunch of excellent tools. You can use this file
 by running
 
 `brew bundle Brewfile`
+
+`git` is installed by defualt starting with OS X Mavericks. Brew will install
+a more recent version but that step is entirely optional.
 
 Finishing this step basically makes the system fully useable from the command
 line. Text editors, productivity apps, and other graphical apps are installed
