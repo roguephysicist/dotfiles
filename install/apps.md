@@ -8,7 +8,7 @@ Install First
 There are a few of these apps that should be installed first so that everything
 goes smoothly afterwards. These apps are:
 
-1. Xcode (with command line tools)
+1. Xcode Command Line Tools
 2. XQuartz
 3. Homebrew and tools in Brewfile
 4. Github for Mac (with command line tools)
@@ -25,12 +25,8 @@ Utilities
 ---------
 These are required installs for any kind of dev work.
 
-* [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12) with
-command line tools
+* The Xcode Command Line Tools, installed with `xcode-select --install`.
 * [XQuartz](https://xquartz.macosforge.org/landing/)
-
-The command line tools for Xcode can be installed from the Xcode preferences
-window.
 
 Homebrew
 --------
@@ -57,6 +53,9 @@ Boilerplate
 Boilerplate apps are my standard set of apps that I use on every computer.
 **Github for Mac** should be installed first, although it's likely you are
 already aware of that if you read the sections above.
+
+You can install most of these apps automatically using the excellent 
+[getmacapps](http://www.getmacapps.com) website.
 
 | Application    | Download From                                                    | Application    | Download From                                                    |
 |----------------|:----------------------------------------------------------------:|----------------|:----------------------------------------------------------------:|
