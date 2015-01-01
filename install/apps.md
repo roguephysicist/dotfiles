@@ -11,7 +11,7 @@ goes smoothly afterwards. These apps are:
 1. Xcode Command Line Tools
 2. XQuartz
 3. Homebrew and tools in Brewfile
-4. Github for Mac (with command line tools)
+4. Github for Mac
 
 Xcode provides all the necessary compilers for installing programs with
 Homebrew. Read more in the Utilities section below.
@@ -57,20 +57,31 @@ already aware of that if you read the sections above.
 You can install most of these apps automatically using the excellent 
 [getmacapps](http://www.getmacapps.com) website.
 
-| Application    | Download From                                                    | Application    | Download From                                                    |
-|----------------|:----------------------------------------------------------------:|----------------|:----------------------------------------------------------------:|
-| 1Password 4    | [Website      ](https://agilebits.com/onepassword)               | Skim           | [Website      ](http://skim-app.sourceforge.net)                 |
-| Sublime Text 3 | [Website      ](http://www.sublimetext.com)                      | Zotero         | [Website      ](https://www.zotero.org)                          |
-| iTerm 2        | [Website      ](http://www.iterm2.com/)                          | Dropbox        | [Website      ](https://www.dropbox.com)                         |
-| Alfred 2       | [Website      ](http://www.alfredapp.com)                        | Spectacle      | [Website      ](http://spectacleapp.com)                         |
-| Github for Mac | [Website      ](https://mac.github.com)                          | Daisydisk      | [Mac App Store](http://www.daisydiskapp.com)                     |
-| PCalc 4        | [Mac App Store](http://www.pcalc.com)                            | Keka           | [Website      ](http://www.kekaosx.com/en/)                      |
-| ReadKit        | [Mac App Store](http://readkitapp.com)                  			| AppDelete      | [Website      ](http://www.reggieashworth.com/appdelete)         |
-| Evernote       | [Mac App Store](http://evernote.com/evernote/)                   | R-Name         | [Website      ](https://www.macupdate.com/app/mac/12259/r-name)  |
-| Fantastical    | [Website      ](https://flexibits.com/fantastical)               | VLC            | [Website      ](http://www.videolan.org/vlc/index.html)          |
-| Ulysses III    | [Mac App Store](http://www.ulyssesapp.com)                       | Spotify        | [Website      ](https://www.spotify.com/download/mac/)           |
-| Mindnode Pro   | [Mac App Store](https://mindnode.com)                            | Firefox        | [Website      ](http://www.mozilla.org/en-US/firefox/new/)       |
-| nvALT          | [Website      ](http://brettterpstra.com/projects/nvalt/)        |                | [Website      ](https://www.virtualbox.org)                      |
+| Application    | Download From                                                                |
+|----------------|:----------------------------------------------------------------------------:|
+| 1Password 4    | [Website      ](https://agilebits.com/onepassword)                           |
+| Sublime Text 3 | [Website      ](http://www.sublimetext.com)                                  |
+| iTerm 2        | [Website      ](http://www.iterm2.com/)                                      |
+| Github for Mac | [Website      ](https://mac.github.com)                                      |
+| PCalc 4        | [Mac App Store](http://www.pcalc.com)                                        |
+| Alfred 2       | [Website      ](http://www.alfredapp.com)                                    |
+| Spectacle      | [Website      ](http://spectacleapp.com)                                     |
+| ReadKit        | [Mac App Store](http://readkitapp.com)                                       |
+| Evernote       | [Mac App Store](http://evernote.com/evernote/)                               |
+| nvALT          | [Website      ](http://brettterpstra.com/projects/nvalt/)                    |
+| Fantastical    | [Website      ](https://flexibits.com/fantastical)                           |
+| Skim           | [Website      ](http://skim-app.sourceforge.net)                             |
+| Zotero         | [Website      ](https://www.zotero.org)                                      |
+| Dropbox        | [Website      ](https://www.dropbox.com)                                     |
+| Daisydisk      | [Mac App Store](http://www.daisydiskapp.com)                                 |
+| Keka           | [Website      ](http://www.kekaosx.com/en/)                                  |
+| AppDelete      | [Website      ](http://www.reggieashworth.com/appdelete)                     |
+| R-Name         | [Website      ](https://www.macupdate.com/app/mac/12259/r-name)              |
+| VirtualBox     | [Website      ](https://www.virtualbox.org)                                  |
+| VLC            | [Website      ](http://www.videolan.org/vlc/index.html)                      |
+| Spotify        | [Website      ](https://www.spotify.com/download/mac/)                       |
+| Firefox        | [Website      ](http://www.mozilla.org/en-US/firefox/new/)                   |
+| Skype          | [Website      ](http://www.skype.com/en/download-skype/skype-for-computer/)  |      |
 
 Command Line
 ------------
