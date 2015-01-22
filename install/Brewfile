@@ -23,6 +23,7 @@ install hub
 install htop-osx
 install poppler
 #install ssh-copy-id
+install screenfetch
 install todo-txt
 install tree
 install vim
