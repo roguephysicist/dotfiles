@@ -16,7 +16,7 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 if [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then
     # TINIBA
     export TINIBA=$HOME/tiniba/
-    export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:.:$PATH"
+    export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:$PATH"
 
     # My binaries
     export PATH="$HOME/bin/bin:$PATH"
