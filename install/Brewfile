@@ -1,4 +1,5 @@
 # Brewfile
+
 # run this by running 'brew bundle path/to/Brewfile'
 
 # Always update and upgrade installed packages first
@@ -17,7 +18,7 @@ install findutils
 install gcc
 install gifsicle
 install git
-install gnuplot --latex --with-x --cairo --pdf --wx --qt
+install gnuplot --with-latex --with-x11 --with-cairo --with-pdflib-lite --with-wxmac --with-qt
 install grc
 install hub
 install htop-osx
