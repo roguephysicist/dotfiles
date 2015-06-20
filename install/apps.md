@@ -64,7 +64,6 @@ You can install most of these apps automatically using the excellent
 | iTerm 2        | [Website      ](http://www.iterm2.com/)                                      |
 | Github for Mac | [Website      ](https://mac.github.com)                                      |
 | PCalc 4        | [Mac App Store](http://www.pcalc.com)                                        |
-| Alfred 2       | [Website      ](http://www.alfredapp.com)                                    |
 | Spectacle      | [Website      ](http://spectacleapp.com)                                     |
 | ReadKit        | [Mac App Store](http://readkitapp.com)                                       |
 | Evernote       | [Mac App Store](http://evernote.com/evernote/)                               |
