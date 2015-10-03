@@ -4,6 +4,6 @@ if [ -f $HOME/.bash_profile ]; then
 fi
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
+#if [ -f /etc/bashrc ]; then
+#    . /etc/bashrc
+#fi

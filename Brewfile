@@ -14,28 +14,19 @@ install bash-completion
 install coreutils
 install curl
 install exiftool
-install findutils
 install gcc
 install gifsicle
 install git
 install gnuplot --with-latex --with-x11 --with-cairo --with-pdflib-lite --with-wxmac --with-qt
 install grc
-install hub
 install htop-osx
-install poppler
-#install ssh-copy-id
 install screenfetch
 install todo-txt
 install tree
 install vim
-install w3m
 install wget
-install xz
 install z
 install zsh
-
-# Using brew-gem to install ruby gems
-# gem jekyll
 
 # Clean up after yourself
 cleanup -s
