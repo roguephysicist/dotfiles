@@ -1,6 +1,7 @@
 ##### Exports #####
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"' # sets tab and window titles
-export PS1="\[\033[38;5;160m\][\h]\[$(tput sgr0)\]\[\033[38;5;15m\] \\$\[$(tput sgr0)\] "
+#export PS1="\[\033[38;5;160m\][\h]\[$(tput sgr0)\]\[\033[38;5;15m\] \\$\[$(tput sgr0)\] "
+export PS1="\[\033[38;5;39m\][\h]\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export EDITOR="vim"
@@ -15,6 +16,14 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export GREP_OPTIONS='--color=auto'
 
 
+##### Extra sourcing #####
+if [[ `uname` == Darwin ]]; then
+    source "$(brew --prefix)/etc/grc.bashrc"        ## Generic Colorizer
+    source "$(brew --prefix)/etc/profile.d/z.sh"    ## Z - Directory access via frecency
+    source "$(brew --prefix)/etc/bash_completion"   ## Bash autocompletion
+fi
+
+
 ##### Aliases #####
 alias ls='ls -h --color=auto'
 alias lx='ls -lXB'         #  Sort by extension.
@@ -26,7 +35,7 @@ alias ll="ls -lv --group-directories-first"
 alias lm='ll |more'        #  Pipe through 'more'
 alias lr='ll -R'           #  Recursive ls.
 alias la='ll -A'           #  Show hidden files.
-alias df='df -H'
+alias df='colourify df -H'
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 alias brewc='brew cleanup'
 alias brewC='brew cleanup --force'
@@ -36,14 +45,6 @@ alias brews='brew search'
 alias brewu='brew upgrade'
 alias brewU='brew update && brew upgrade'
 alias brewx='brew remove'
-
-
-##### Extra sourcing #####
-if [[ `uname` == Darwin ]]; then
-    source "$(brew --prefix)/etc/grc.bashrc"        ## Generic Colorizer
-    source "$(brew --prefix)/etc/profile.d/z.sh"    ## Z - Directory access via frecency
-    source "$(brew --prefix)/etc/bash_completion"   ## Bash autocompletion
-fi
 
 
 ##### Paths #####
