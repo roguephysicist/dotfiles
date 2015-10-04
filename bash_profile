@@ -1,7 +1,6 @@
 ##### Exports #####
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"' # sets tab and window titles
-#export PS1="\[\033[38;5;160m\][\h]\[$(tput sgr0)\]\[\033[38;5;15m\] \\$\[$(tput sgr0)\] "
-export PS1="\[\033[38;5;39m\][\h]\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]"
+export PS1="\[\e[37m\][\[\e[m\]\[\e[37m\]\h\[\e[m\]\[\e[37m\]]\[\e[m\] \[\e[31m\]\W\[\e[m\] \[\e[37m\]\\$\[\e[m\] "
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export EDITOR="vim"
