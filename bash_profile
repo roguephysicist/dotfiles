@@ -34,7 +34,11 @@ alias ll="ls -lv --group-directories-first"
 alias lm='ll |more'        #  Pipe through 'more'
 alias lr='ll -R'           #  Recursive ls.
 alias la='ll -A'           #  Show hidden files.
-alias df='colourify df -H'
+if [[ `uname` == Darwin ]]; then
+    alias df='colourify df -H'
+elif [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
+    alias df='df -H'
+fi
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 alias brewc='brew cleanup'
 alias brewC='brew cleanup --force'
