@@ -12,7 +12,6 @@ export MANPAGER="less -X"
 export GNUTERM=wxt
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export GREP_OPTIONS='--color=auto'
 
 
 ##### Extra sourcing #####
