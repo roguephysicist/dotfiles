@@ -71,16 +71,18 @@ function gi() {
 
 ## plotex - for creating plots in pdf from gnuplot epslatex files
 function plotex() {
-    local tex=`grep "set output" $1 | grep -v '\#' | awk -F\" '{print $(NF-1)}'`
-    local name=`basename $tex .tex`
+    local tex=(`grep "set output" $1 | grep -v '\#' | awk -F\' '{print $(NF-1)}'`)
     gnuplot $1
-    epstopdf $name-inc.eps
-    pdflatex $tex
-    rm -f $name-inc.eps
-    rm -f $name-inc.pdf
-    rm -f $name.aux
-    rm -f $name.log
-    rm -f $tex
+    for file in ${tex[@]}; do
+        local name=`basename $file .tex`
+        epstopdf $name-inc.eps
+        pdflatex $file
+        rm -f $name-inc.eps
+        rm -f $name-inc.pdf
+        rm -f $name.aux
+        rm -f $name.log
+        rm -f $file
+    done
     clear
 }
 
@@ -123,3 +125,5 @@ function brewS() {
         [ "$?" != "0" ] && $BREW install ${PACKAGE}
     done
 }
+
+#test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
