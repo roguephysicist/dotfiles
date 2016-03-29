@@ -56,7 +56,7 @@ if [[ `uname` == Darwin ]]; then
     export PATH=/usr/texbin:$PATH    ## MacTex (already included in prezto)
     export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH ## Homebrew GNU Coreutils
     export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
-elif [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
+elif [[ `hostname` == fat* || `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
     export TINIBA=$HOME/tiniba/
     export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:$PATH"
 fi
@@ -124,5 +124,3 @@ function brewS() {
         [ "$?" != "0" ] && $BREW install ${PACKAGE}
     done
 }
-
-#test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
