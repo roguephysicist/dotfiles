@@ -59,7 +59,6 @@ if [[ `uname` == Darwin ]]; then
 elif [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
     export TINIBA=$HOME/tiniba/
     export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:$PATH"
-    export PATH="$HOME/bin/bin:$PATH"
 fi
 
 
