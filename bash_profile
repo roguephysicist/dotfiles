@@ -35,18 +35,18 @@ alias lr='ll -R'           #  Recursive ls.
 alias la='ll -A'           #  Show hidden files.
 if [[ `uname` == Darwin ]]; then
     alias df='colourify df -H'
-elif [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
+    alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
+    alias brewc='brew cleanup'
+    alias brewC='brew cleanup --force'
+    alias brewi='brew install'
+    alias brewl='brew list'
+    alias brews='brew search'
+    alias brewu='brew upgrade'
+    alias brewU='brew update && brew upgrade'
+    alias brewx='brew remove'
+elif [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* || `hostname`== fat* ]]; then ## Paths for medusa
     alias df='df -H'
 fi
-alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
-alias brewc='brew cleanup'
-alias brewC='brew cleanup --force'
-alias brewi='brew install'
-alias brewl='brew list'
-alias brews='brew search'
-alias brewu='brew upgrade'
-alias brewU='brew update && brew upgrade'
-alias brewx='brew remove'
 
 
 ##### Paths #####
