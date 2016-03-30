@@ -44,7 +44,7 @@ if [[ `uname` == Darwin ]]; then
     alias brewu='brew upgrade'
     alias brewU='brew update && brew upgrade'
     alias brewx='brew remove'
-elif [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* || `hostname`== fat* ]]; then ## Paths for medusa
+elif [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* || `hostname` == fat* ]]; then ## Paths for medusa
     alias df='df -H'
 fi
 
