@@ -16,9 +16,9 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 ##### Extra sourcing #####
 if [[ `uname` == Darwin ]]; then
-    source "$(brew --prefix)/etc/grc.bashrc"        ## Generic Colorizer
-    source "$(brew --prefix)/etc/profile.d/z.sh"    ## Z - Directory access via frecency
-    source "$(brew --prefix)/etc/bash_completion"   ## Bash autocompletion
+    source "/usr/local/etc/grc.bashrc"        ## Generic Colorizer
+    source "/usr/local/etc/profile.d/z.sh"    ## Z - Directory access via frecency
+    source "/usr/local/etc/bash_completion"   ## Bash autocompletion
 fi
 
 
