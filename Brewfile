@@ -10,23 +10,32 @@ upgrade
 install ack
 install bash
 install bash-completion
+install cheat
+install coreutils
 install curl
 install diff-pdf
+install exiftool
+install gcc
+install gifsicle
 install git
-install gnuplot --with-tex --with-x11 --with-cairo --with-pdflib-lite --with-wxmac --with-qt
+install gnuplot --with-tex --with-x11 --with-cairo --with-pdflib-lite --with-wxmac
 install grc
 install htop-osx
+install imagemagick
+install lcdf-typetools
+install mobile-shell
+install pandoc
+install potrace
+install screenfetch
+install tesseract
 install todo-txt
 install tree
 install vim
 install wget
 install z
-# install imagemagick
-# install coreutils
-# install exiftool
-# install gcc
-# install gifsicle
-# install screenfetch
+# install gnuplot --with-tex --with-x11 --with-cairo --with-pdflib-lite --with-wxmac --with-qt
+
+tap homebrew/science
 
 # Clean up after yourself
 cleanup -s
