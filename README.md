@@ -78,31 +78,30 @@ already aware of that if you read the sections above.
 You can install most of these apps automatically using the excellent 
 [getmacapps](http://www.getmacapps.com) website.
 
-| Application    | Download From                                                                |
-|----------------|:----------------------------------------------------------------------------:|
-| 1Password 4    | [Website      ](https://agilebits.com/onepassword)                           |
-| Sublime Text 3 | [Website      ](http://www.sublimetext.com)                                  |
-| iTerm 2        | [Website      ](http://www.iterm2.com/)                                      |
-| Github for Mac | [Website      ](https://mac.github.com)                                      |
-| PCalc 4        | [Mac App Store](http://www.pcalc.com)                                        |
-| Spectacle      | [Website      ](http://spectacleapp.com)                                     |
-| ReadKit        | [Mac App Store](http://readkitapp.com)                                       |
-| Evernote       | [Mac App Store](http://evernote.com/evernote/)                               |
-| nvALT          | [Website      ](http://brettterpstra.com/projects/nvalt/)                    |
-| Fantastical    | [Website      ](https://flexibits.com/fantastical)                           |
-| Skim           | [Website      ](http://skim-app.sourceforge.net)                             |
-| Zotero         | [Website      ](https://www.zotero.org)                                      |
-| Dropbox        | [Website      ](https://www.dropbox.com)                                     |
-| Daisydisk      | [Mac App Store](http://www.daisydiskapp.com)                                 |
-| Keka           | [Website      ](http://www.kekaosx.com/en/)                                  |
-| AppCleaner     | [Website      ](http://freemacsoft.net/appcleaner/)                          |
-| R-Name         | [Website      ](https://www.macupdate.com/app/mac/12259/r-name)              |
-| VirtualBox     | [Website      ](https://www.virtualbox.org)                                  |
-| VLC            | [Website      ](http://www.videolan.org/vlc/index.html)                      |
-| Spotify        | [Website      ](https://www.spotify.com/download/mac/)                       |
-| Firefox        | [Website      ](http://www.mozilla.org/en-US/firefox/new/)                   |
-| Skype          | [Website      ](http://www.skype.com/en/download-skype/skype-for-computer/)  |
-| Transmission   | [Website      ](http://www.transmissionbt.com)                               | 
+| Application    | Download From                                                   |
+|----------------|:---------------------------------------------------------------:|
+| 1Password 6    | [Website      ](https://agilebits.com/onepassword)              |
+| Airmail 3      | [Mac App Store](http://airmailapp.com)                          |
+| Sublime Text 3 | [Website      ](http://www.sublimetext.com)                     |
+| iTerm 2        | [Website      ](http://www.iterm2.com/)                         |
+| Github for Mac | [Website      ](https://mac.github.com)                         |
+| PCalc 4        | [Mac App Store](http://www.pcalc.com)                           |
+| Spectacle      | [Website      ](http://spectacleapp.com)                        |
+| nvALT          | [Website      ](http://brettterpstra.com/projects/nvalt/)       |
+| Skim           | [Website      ](http://skim-app.sourceforge.net)                |
+| Zotero         | [Website      ](https://www.zotero.org)                         |
+| Dropbox        | [Website      ](https://www.dropbox.com)                        |
+| Daisydisk      | [Mac App Store](http://www.daisydiskapp.com)                    |
+| Keka           | [Website      ](http://www.kekaosx.com/en/)                     |
+| AppCleaner     | [Website      ](http://freemacsoft.net/appcleaner/)             |
+| R-Name         | [Website      ](https://www.macupdate.com/app/mac/12259/r-name) |
+| VirtualBox     | [Website      ](https://www.virtualbox.org)                     |
+| VLC            | [Website      ](http://www.videolan.org/vlc/index.html)         |
+| Spotify        | [Website      ](https://www.spotify.com/download/mac/)          |
+| Firefox        | [Website      ](http://www.mozilla.org/en-US/firefox/new/)      |
+| Chrome         | [Website      ](https://www.google.com/chrome)                  |
+| Skype          | [Website      ](https://www.skype.com/en/)                      |
+| Transmission   | [Website      ](http://www.transmissionbt.com)                  |
 
 Command Line
 ------------
@@ -110,8 +109,8 @@ These apps are only used in the terminal. This list does not include Homebrew
 or programs installed with Homebrew. Read the preceeding section for more info
 on that. 
 
-* [Anaconda Python Distribution](https://store.continuum.io/cshop/anaconda/)
-* [pdftk](http://www.pdflabs.com/tools/pdftk-server/)
+* [Anaconda Python Distribution](https://www.continuum.io/downloads)
+* [pdftk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.11-setup.pkg)
 * [Vagrant](https://www.vagrantup.com)
 
 Sublime Text 3
@@ -133,21 +132,3 @@ I typically install the full [MacTeX distribution](http://tug.org/mactex/) on
 all my computers. This can be skipped if you aren't planning on using LaTeX.
 It is a big (and often slow) download. It might be worth reconsidering in favor
 of the much slimmer BasicTeX.
-
-System Fonts
--------
-Excellent free fonts. These are mostly OpenType and support advanced features.
-
-* (EB Garamond)         [http://www.georgduffner.at/ebgaramond/]
-* (Essays 1743)         [http://www.thibault.org/fonts/essays/]
-* (Forum)               [http://www.fontsquirrel.com/fonts/forum]
-* (Gentium Plus)        [http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=Gentium_download]
-* (Inconsolata)         [http://levien.com/type/myfonts/inconsolata.html]
-* (Lato)                [http://www.latofonts.com/lato-free-fonts/]
-* (Linux Biolinum)      [http://www.linuxlibertine.org/index.php?id=1&L=1]
-* (Linux Libertine)     [http://www.linuxlibertine.org/index.php?id=1&L=1]
-* (Roboto)              [http://www.fontsquirrel.com/fonts/roboto]
-* (Sina Nova)           [http://www.fontsquirrel.com/fonts/sina-nova]
-* (Source Code Pro)     [https://github.com/adobe-fonts/source-code-pro]
-* (Source Sans Pro)     [https://github.com/adobe-fonts/source-sans-pro]
-* (Source Serif Pro)    [https://github.com/adobe-fonts/source-serif-pro]
