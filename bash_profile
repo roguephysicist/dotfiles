@@ -83,3 +83,6 @@ function plotex() {
 function secret() {
     hdiutil attach $1 -stdinpass
 }
+
+# added by Anaconda3 4.2.0 installer
+export PATH="/Users/sma/anaconda/bin:$PATH"
