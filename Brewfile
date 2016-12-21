@@ -36,7 +36,7 @@ install screenfetch
 install tesseract
 install todo-txt
 install tree
-install vim
+install vim --without-perl --without-python --without-ruby
 install wget
 install z
 

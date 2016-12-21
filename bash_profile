@@ -45,9 +45,10 @@ fi
 
 ##### Paths #####
 if [[ `uname` == Darwin ]]; then
-    export PATH=/usr/local/bin:$PATH ## Homebrew (already included in prezto)
-    export PATH=/opt/X11/bin:$PATH   ## XQuartz (already included in prezto)
-    export PATH=/usr/texbin:$PATH    ## MacTex (already included in prezto)
+    export PATH="/Users/sma/anaconda3/bin:$PATH"
+    # export PATH=/usr/local/bin:$PATH ## Homebrew (already included in prezto)
+    # export PATH=/opt/X11/bin:$PATH   ## XQuartz (already included in prezto)
+    # export PATH=/usr/texbin:$PATH    ## MacTex (already included in prezto)
     # export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH ## Homebrew GNU Coreutils
     # export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 elif [[ `hostname` == fat* || `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
@@ -83,6 +84,3 @@ function plotex() {
 function secret() {
     hdiutil attach $1 -stdinpass
 }
-
-# added by Anaconda3 4.2.0 installer
-export PATH="/Users/sma/anaconda/bin:$PATH"
