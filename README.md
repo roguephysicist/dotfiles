@@ -99,7 +99,6 @@ You can install most of these apps automatically using the excellent
 | VLC            | [Website      ](http://www.videolan.org/vlc/index.html)         |
 | Spotify        | [Website      ](https://www.spotify.com/download/mac/)          |
 | Firefox        | [Website      ](http://www.mozilla.org/en-US/firefox/new/)      |
-| Chrome         | [Website      ](https://www.google.com/chrome)                  |
 | Skype          | [Website      ](https://www.skype.com/en/)                      |
 | Transmission   | [Website      ](http://www.transmissionbt.com)                  |
 
