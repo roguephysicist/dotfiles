@@ -1,47 +1,43 @@
+#!/bin/bash
 # Brewfile
 
-# run this by running 'brew bundle path/to/Brewfile'
-
 # Always update and upgrade installed packages first
-update
-upgrade
+brew update
+brew upgrade
 
 # These are my favorite tools to use from the command line. I love it!!
-install ack
-install bash
-install bash-completion
-install cheat
-install coreutils
-install curl
-install diff-pdf
-install exiftool
-install ffmpeg
-install gcc
-install gifsicle
-install git
-install gnuplot --with-tex --with-x11 --with-cairo --with-pdflib-lite --with-wxmac
-install grc
-install htop
-install imagemagick
-install lcdf-typetools
-install mobile-shell
-# install node
-install pandoc
-install pango
-# install perl
-install potrace
-# install python
-# install ruby
-install screenfetch
-install tesseract
-install todo-txt
-install tree
-install vim --without-perl --without-python --without-ruby
-install wget
-install z
+brew install ack
+brew install bash
+brew install bash-completion
+brew install cheat
+# brew install coreutils
+brew install curl
+brew install diff-pdf
+brew install doxygen
+brew install exiftool
+brew install ffmpeg
+brew install gcc --without-multilib # SLOW -- 39 minutes
+# brew install gifsicle
+brew install git
+brew install gnuplot --with-tex --with-x11 --with-cairo --with-pdflib-lite --with-wxmac
+brew install grc
+brew install htop
+brew install imagemagick
+# brew install lcdf-typetools
+# brew install mobile-shell
+brew install pandoc
+brew install potrace
+brew install python3
+# brew install tesseract
+brew install todo-txt
+brew install tree
+brew install vim --with-override-system-vi --without-perl --without-python --without-ruby
+brew install wget
+brew install z
 
-# Homebrew/science for great good
-# tap homebrew/science
+# brew tap beeftornado/rmtree
+# brew tap homebrew/science
 
 # Clean up after yourself
-cleanup -s
+brew cleanup
+brew cleanup -s
