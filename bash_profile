@@ -50,8 +50,6 @@ fi
     # export PATH=/usr/local/bin:$PATH ## Homebrew (already included in prezto)
     # export PATH=/opt/X11/bin:$PATH   ## XQuartz (already included in prezto)
     # export PATH=/usr/texbin:$PATH    ## MacTex (already included in prezto)
-    # export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH ## Homebrew GNU Coreutils
-    # export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 if [[ `hostname` == fat* || `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
     export TINIBA=$HOME/tiniba/
     export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:$PATH"
