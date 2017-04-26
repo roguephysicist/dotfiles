@@ -47,6 +47,7 @@ fi
 ##### Paths #####
 # if [[ `uname` == Darwin ]]; then
     # export PATH="/Users/sma/anaconda3/bin:$PATH"
+    # export PATH="/Users/sma/anaconda2/bin:$PATH"
     # export PATH=/usr/local/bin:$PATH ## Homebrew (already included in prezto)
     # export PATH=/opt/X11/bin:$PATH   ## XQuartz (already included in prezto)
     # export PATH=/usr/texbin:$PATH    ## MacTex (already included in prezto)
