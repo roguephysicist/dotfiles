@@ -32,7 +32,7 @@ brew install python3
 brew install todo-txt
 brew install tree
 brew install vagrant-completion
-brew install vim --with-override-system-vi --without-perl --without-python --without-ruby
+brew install vim --with-override-system-vi --without-perl --without-ruby
 brew install wget
 brew install z
 
