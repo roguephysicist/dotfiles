@@ -9,7 +9,8 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 export MANPAGER="less -X"
-export GNUTERM=wxt
+#export GNUTERM=wxt
+export GNUTERM=qt
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 # export HOMEBREW_CC=gcc-6
@@ -17,7 +18,6 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 ##### Extra sourcing #####
 if [[ `uname` == Darwin ]]; then
-    source "/usr/local/etc/grc.bashrc"        ## Generic Colorizer
     source "/usr/local/etc/profile.d/z.sh"    ## Z - Directory access via frecency
     source "/usr/local/etc/bash_completion"   ## Bash autocompletion
 fi
@@ -45,13 +45,11 @@ fi
 
 
 ##### Paths #####
-# if [[ `uname` == Darwin ]]; then
-    # export PATH="/Users/sma/anaconda3/bin:$PATH"
+if [[ `uname` == Darwin ]]; then
+    export PATH="/Users/sma/anaconda3/bin:$PATH"
     # export PATH="/Users/sma/anaconda2/bin:$PATH"
-    # export PATH=/usr/local/bin:$PATH ## Homebrew (already included in prezto)
-    # export PATH=/opt/X11/bin:$PATH   ## XQuartz (already included in prezto)
-    # export PATH=/usr/texbin:$PATH    ## MacTex (already included in prezto)
-if [[ `hostname` == fat* || `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
+    :
+elif [[ `hostname` == fat* || `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
     export TINIBA=$HOME/tiniba/
     export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:$PATH"
 fi
@@ -70,7 +68,7 @@ function plotex() {
     for file in ${tex[@]}; do
         local name=`basename $file .tex`
         epstopdf $name-inc.eps
-        pdflatex $file
+        pdflatex -interaction=batchmode $file
         rm -f $name-inc.eps
         rm -f $name-inc.pdf
         rm -f $name.aux
