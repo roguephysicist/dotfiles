@@ -10,12 +10,11 @@ brew install ack
 brew install bash
 brew install bash-completion
 brew install cheat
-# brew install coreutils
 brew install curl
 # brew install diff-pdf
 brew install exiftool
 brew install ffmpeg --with-fdk-aac
-brew install gcc --without-multilib # SLOW -- 39 minutes
+brew install gcc --without-multilib # SLOW: ~40 minutes
 brew install git
 # brew install gnuplot --with-x11 --with-pdflib-lite --with-qt@5.7 --with-wxmac --with-cairo
 brew install gnuplot --with-x11 --with-pdflib-lite --with-qt@5.7
