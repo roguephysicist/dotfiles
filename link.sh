@@ -4,6 +4,7 @@
 
 ln -sf $PWD/gitconfig       $HOME/.gitconfig
 ln -sf $PWD/gitignore       $HOME/.gitignore
+ln -sf $PWD/gnuplot         $HOME/.gnuplot
 ln -sf $PWD/todo.cfg        $HOME/.todo.cfg
 ln -sf $PWD/screenrc        $HOME/.screenrc
 ln -sf $PWD/bashrc          $HOME/.bashrc
