@@ -22,7 +22,7 @@ brew install imagemagick
 brew install todo-txt
 brew install tree
 brew install vagrant-completion
-brew install vim --with-override-system-vi --without-python --without-perl --without-ruby
+brew install vim --with-override-system-vi --without-perl --without-ruby
 brew install wget
 brew install z
 brew install homebrew/science/abinit
