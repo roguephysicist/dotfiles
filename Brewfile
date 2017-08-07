@@ -11,21 +11,21 @@ brew install bash
 brew install bash-completion
 brew install cheat
 brew install curl
-# brew install diff-pdf
+brew install diff-pdf
 brew install exiftool
 brew install ffmpeg --with-fdk-aac
 brew install gcc --without-multilib # SLOW: ~40 minutes
 brew install git
-# brew install gnuplot --with-x11 --with-pdflib-lite --with-qt@5.7 --with-wxmac --with-cairo
-brew install gnuplot --with-x11 --with-pdflib-lite --with-qt@5.7
+brew install gnuplot --with-x11 --with-pdflib-lite --with-qt --with-wxmac --with-cairo
 brew install htop
-brew install imagemagick --with-quantum-depth-16
+brew install imagemagick
 brew install todo-txt
 brew install tree
 brew install vagrant-completion
 brew install vim --with-override-system-vi --without-python --without-perl --without-ruby
 brew install wget
 brew install z
+brew install homebrew/science/abinit
 
 ## Tools that only get very sporadic use
 # brew install gifsicle         # handling and optimizing gifs

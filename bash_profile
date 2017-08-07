@@ -9,45 +9,39 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 export MANPAGER="less -X"
-#export GNUTERM=wxt
-export GNUTERM=qt
+export GNUTERM=wxt
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 # export HOMEBREW_CC=gcc-6
 # export HOMEBREW_CXX=g++-6
 
 ##### Extra sourcing #####
-if [[ `uname` == Darwin ]]; then
-    source "/usr/local/etc/profile.d/z.sh"    ## Z - Directory access via frecency
-    source "/usr/local/etc/bash_completion"   ## Bash autocompletion
-fi
-
+[ -f /usr/local/etc/profile.d/z.sh ] && . /usr/local/etc/profile.d/z.sh
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 ##### Aliases #####
 alias ls='ls -h'
-alias ll="ls -lv"
-alias lr='ll -R'           #  Recursive ls.
-alias la='ll -A'           #  Show hidden files.
-if [[ `uname` == Darwin ]]; then
-    alias df='colourify df -H'
-    alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
-    alias brewc='brew cleanup'
-    alias brewC='brew cleanup --force'
-    alias brewi='brew install'
-    alias brewl='brew list'
-    alias brews='brew search'
-    alias brewu='brew upgrade'
-    alias brewU='brew update && brew upgrade'
-    alias brewx='brew remove'
-elif [[ `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* || `hostname` == fat* ]]; then ## Paths for medusa
-    alias df='df -H'
-fi
+alias ll='ls -lv'
+alias lr='ll -R'           # Recursive ls.
+alias la='ll -A'           # Show hidden files.
+alias df='df -H'           # df with human readable sizes
+alias tree='tree -Csuh'    # Nice alternative to 'recursive ls' ...
+## brew aliases (mac only)
+alias brewc='brew cleanup'
+alias brewC='brew cleanup --force'
+alias brewi='brew install'
+alias brewl='brew list'
+alias brews='brew search'
+alias brewu='brew upgrade'
+alias brewU='brew update && brew upgrade'
+alias brewx='brew remove'
 
 
 ##### Paths #####
 if [[ `uname` == Darwin ]]; then
-    export PATH="/Users/sma/anaconda3/bin:$PATH"
-    # export PATH="/Users/sma/anaconda2/bin:$PATH"
+    export PATH="/Users/sma/anaconda3/bin:$PATH" # Anaconda Python 3.6
+    # export PATH="/Users/sma/anaconda2/bin:$PATH" # Anaconda Python 2.7
+    # export PATH="/usr/local/opt/python/libexec/bin:$PATH" # brew Python 2.7
     :
 elif [[ `hostname` == fat* || `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
     export TINIBA=$HOME/tiniba/
