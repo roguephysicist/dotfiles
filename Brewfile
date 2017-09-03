@@ -25,7 +25,7 @@ brew install vagrant-completion
 brew install vim --with-override-system-vi --without-perl --without-ruby
 brew install wget
 brew install z
-brew install homebrew/science/abinit
+# brew install homebrew/science/abinit
 
 ## Tools that only get very sporadic use
 # brew install gifsicle         # handling and optimizing gifs
