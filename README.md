@@ -27,7 +27,6 @@ Boilerplate apps are my standard set of graphical apps that I use on every compu
 | Application    | Download From                                                   |
 |----------------|:---------------------------------------------------------------:|
 | 1Password 6    | [Website      ](https://agilebits.com/onepassword)              |
-| Spark          | [Mac App Store](https://sparkmailapp.com)                       |
 | Sublime Text 3 | [Website      ](http://www.sublimetext.com)                     |
 | iTerm 2        | [Website      ](http://www.iterm2.com/)                         |
 | Github for Mac | [Website      ](https://mac.github.com)                         |
