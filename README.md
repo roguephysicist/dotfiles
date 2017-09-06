@@ -5,87 +5,59 @@ A repo that contains my set-up of dotfiles, suited for both macOS and Linux. It 
 
 Run `link.sh` to link the dotfiles to your home directory.
 
+On macOS, I immediately change the following keyboard settings:
 
-Utilities
------------
-There are a few of these apps that should be installed first so that everything goes smoothly afterwards. These apps are:
-
-1. Xcode Command Line Tools (install with `xcode-select --install`)
-2. [XQuartz](https://xquartz.macosforge.org/landing/)
-3. [Homebrew](https://brew.sh) and tools in [Brewfile](./Brewfile)
-4. [Github for Mac](https://mac.github.com)
-
-These are required installs for any kind of dev work; for example, Xcode provides all the necessary compilers for installing programs with Homebrew. XQuartz is mostly optional but some programs have some X11 dependencies that require it. `git` comes by default with macOS, but I also install a more recent version via Homebrew. You can also install useful Git command line tools from the Github desktop app.
-
-Installing these programs basically makes the system fully usable from the command line. Text editors, productivity apps, and other graphical apps are installed in the next section.
-
-
-Boilerplate
------------
-Boilerplate apps are my standard set of graphical apps that I use on every computer. **Github for Mac** should be installed first, although it's likely you are already aware of that if you read the preceding section. You can install most of these apps automatically using the [getmacapps](http://www.getmacapps.com) website.
-
-| Application    | Download From                                                   |
-|----------------|:---------------------------------------------------------------:|
-| 1Password 6    | [Website      ](https://agilebits.com/onepassword)              |
-| Sublime Text 3 | [Website      ](http://www.sublimetext.com)                     |
-| iTerm 2        | [Website      ](http://www.iterm2.com/)                         |
-| Github for Mac | [Website      ](https://mac.github.com)                         |
-| PCalc 4        | [Mac App Store](http://www.pcalc.com)                           |
-| Spectacle      | [Website      ](http://spectacleapp.com)                        |
-| nvALT          | [Website      ](http://brettterpstra.com/projects/nvalt/)       |
-| Skim           | [Website      ](http://skim-app.sourceforge.net)                |
-| Zotero         | [Website      ](https://www.zotero.org)                         |
-| Dropbox        | [Website      ](https://www.dropbox.com)                        |
-| Daisydisk      | [Website      ](http://www.daisydiskapp.com)                    |
-| Keka           | [Website      ](http://www.kekaosx.com/en/)                     |
-| AppCleaner     | [Website      ](http://freemacsoft.net/appcleaner/)             |
-| R-Name         | [Website      ](https://www.macupdate.com/app/mac/12259/r-name) |
-| VirtualBox     | [Website      ](https://www.virtualbox.org)                     |
-| VLC            | [Website      ](http://www.videolan.org/vlc/index.html)         |
-| Spotify        | [Website      ](https://www.spotify.com/download/mac/)          |
-| Firefox        | [Website      ](http://www.mozilla.org/en-US/firefox/new/)      |
-| Skype          | [Website      ](https://www.skype.com/en/)                      |
-| Transmission   | [Website      ](http://www.transmissionbt.com)                  |
-| Whatsapp       | [Mac App Store](https://www.whatsapp.com)                  |
-
-
-Command Line
-------------
-These apps are only used in the terminal. This list does not include Homebrew or programs installed with Homebrew.
-
-* [Anaconda Python](https://www.anaconda.com)
-* [pdftk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.11-setup.pkg)
-* [Vagrant](https://www.vagrantup.com)
-
-
-Sublime Text 3
---------------
-
-Sublime Text has a command line interface called `subl`. You can use this from the command line by symlinking as follows:
-
-`ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl`
-
-You can then run `subl` from the terminal to open or create a file.
-
-Linking the Sublime Text 3 configuration files and synchronizing them through Dropbox is detailed [here](https://packagecontrol.io/docs/syncing#dropbox-osx).
-
-
-MacTeX
-------
-I typically install the full [MacTeX distribution](http://tug.org/mactex/) on all my computers. This can be skipped if you aren't planning on using LaTeX. It is a big (and often slow) download. It might be worth reconsidering in favor of the much slimmer BasicTeX.
-
-
-Misc.
---------
 ```
 defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
 ```
 
-Does not work in El Capitan and later:
-```
-defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder
-```
-and also causes the infamous "blank quicklook image" bug.
+Standard utilities and programs
+-----------
+Almost everything is installed using Homebrew and Homebrew-Cask, including CLI and GUI programs. To install everything from a fresh macOS, the procedure is as follows:
 
-Need to mention [QLStephen](https://github.com/whomwah/qlstephen)
+1. Install Xcode Command Line Tools with `xcode-select --install`
+2. Install [Homebrew](https://brew.sh)
+3. Install the tools in the [Brewfile](./Brewfile) with `brew tap homebrew/bundle && brew bundle`
+
+Things should be installed in the specified order; for example, Xcode provides all the necessary compilers for installing programs with Homebrew. A list of installed GUI apps is included in the next section. Remember to clean your system after running the above in order to recover a significant amount of space:
+
+```
+brew cleanup; brew cleanup -s; brew cask cleanup
+```
+
+There are two additional programs that should be installed outside of Homewbrew:
+
+* [Anaconda Python](https://www.anaconda.com)
+* [pdftk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.11-setup.pkg)
+
+Lastly, linking the Sublime Text 3 configuration files and synchronizing them through Dropbox is detailed [here](https://packagecontrol.io/docs/syncing#dropbox-osx).
+
+
+Boilerplate
+-----------
+Boilerplate apps are my standard set of graphical apps that I use on every computer. These are installed automatically using Homebrew-Cask (see the [Brewfile](./Brewfile)).
+
+| Application    | Website                                        |
+|----------------|------------------------------------------------|
+| 1Password 6    | https://agilebits.com/onepassword              |
+| Sublime Text 3 | http://www.sublimetext.com                     |
+| iTerm 2        | http://www.iterm2.com/                         |
+| Github for Mac | https://mac.github.com                         |
+| PCalc 4        | http://www.pcalc.com                           |
+| Spectacle      | http://spectacleapp.com                        |
+| nvALT          | http://brettterpstra.com/projects/nvalt/       |
+| Skim           | http://skim-app.sourceforge.net                |
+| Zotero         | https://www.zotero.org                         |
+| Dropbox        | https://www.dropbox.com                        |
+| Daisydisk      | http://www.daisydiskapp.com                    |
+| Keka           | http://www.kekaosx.com/en/                     |
+| AppCleaner     | http://freemacsoft.net/appcleaner/             |
+| R-Name         | https://www.macupdate.com/app/mac/12259/r-name |
+| VirtualBox     | https://www.virtualbox.org                     |
+| VLC            | http://www.videolan.org/vlc/index.html         |
+| Spotify        | https://www.spotify.com/download/mac/          |
+| Firefox        | http://www.mozilla.org/en-US/firefox/new/      |
+| Skype          | https://www.skype.com/en/                      |
+| Transmission   | http://www.transmissionbt.com                  |
+| Whatsapp       | https://www.whatsapp.com                       |

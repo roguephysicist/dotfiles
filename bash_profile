@@ -12,6 +12,7 @@ export MANPAGER="less -X"
 export GNUTERM=wxt
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # export HOMEBREW_CC=gcc-6
 # export HOMEBREW_CXX=g++-6
 

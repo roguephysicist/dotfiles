@@ -1,43 +1,68 @@
-#!/bin/bash
 # Brewfile
 
-## Always update and upgrade installed packages first
-brew update
-brew upgrade
+# Set up caskroom and install xquartz
+cask_args appdir: "/Applications"
+tap "caskroom/cask"
+cask "xquartz"
 
-## These are my favorite tools to use from the command line.
-brew install ack
-brew install bash
-brew install bash-completion
-brew install cheat
-brew install curl
-brew install diff-pdf
-brew install exiftool
-brew install ffmpeg --with-fdk-aac
-brew install gcc --without-multilib # SLOW: ~40 minutes
-brew install git
-brew install gnuplot --with-x11 --with-pdflib-lite --with-qt --with-wxmac --with-cairo
-brew install htop
-brew install imagemagick
-brew install todo-txt
-brew install tree
-brew install vagrant-completion
-brew install vim --with-override-system-vi --without-perl --without-ruby
-brew install wget
-brew install z
-# brew install homebrew/science/abinit
+## Install CLI programs using brew
+brew "ack"
+brew "bash"
+brew "bash-completion"
+brew "brew-cask-completion"
+brew "cheat"
+brew "curl"
+brew "git"
+brew "diff-pdf"
+brew "exiftool"
+brew "ffmpeg", args: ["with-fdk-aac"]
+brew "gcc"
+brew "gnuplot", args: ["with-cairo", "with-pdflib-lite", "with-qt", "with-wxmac", "with-x11"]
+brew "htop"
+brew "imagemagick"
+brew "mas"
+brew "todo-txt"
+brew "tree"
+brew "vagrant-completion"
+brew "vim", args: ["with-override-system-vi", "without-perl", "without-ruby"]
+brew "wget"
+brew "z"
 
 ## Tools that only get very sporadic use
-# brew install gifsicle         # handling and optimizing gifs
-# brew install lcdf-typetools   # dealing with Adobe fonts for LaTeX
-# brew install pandoc           # converting between document formats
-# brew install potrace          # creating vector images of signatures
-# brew install tesseract        # process image files into text with OCR
+# brew "gcc", args: ["without-multilib"] # VERY SLOW: ~40 minutes
+# brew "gifsicle"       # handling and optimizing gifs
+# brew "lcdf-typetools" # dealing with Adobe fonts for LaTeX
+# brew "pandoc"         # converting between document formats
+# brew "potrace"        # creating vector images of signatures
+# brew "tesseract"      # process image files into text with OCR
+# brew "innoextract"    # for extracting GOG executables (for old games)
 
-## Taps 
-# brew tap beeftornado/rmtree   # removes a formula and unused dependencies
-# brew tap homebrew/science     # tap that includes many scientific programs
+## Install GUI programs using cask
+cask "1password"
+cask "sublime-text"
+cask "iterm2"
+cask "github-desktop"
+mas "PCalc", id: 403504866
+cask "spectacle"
+cask "nvalt"
+cask "skim"
+cask "zotero"
+cask "dropbox"
+cask "daisydisk"
+cask "keka"
+cask "appcleaner"
+cask "r-name"
+cask "virtualbox"
+cask "vlc"
+cask "spotify"
+cask "firefox"
+cask "skype"
+cask "transmission"
+cask "whatsapp"
+cask "qlstephen"
+cask "mactex"
+cask "vagrant"
 
-## Clean up after yourself
-brew cleanup
-brew cleanup -s
+## Science programs, not usually needed
+# tap "homebrew/science"
+# brew "abinit"
