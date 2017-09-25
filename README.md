@@ -8,6 +8,7 @@ Run `link.sh` to link the dotfiles to your home directory.
 On macOS, I immediately change the following keyboard settings:
 
 ```
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
 defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
 ```
@@ -57,7 +58,6 @@ Boilerplate apps are my standard set of graphical apps that I use on every compu
 | VirtualBox     | https://www.virtualbox.org                     |
 | VLC            | http://www.videolan.org/vlc/index.html         |
 | Spotify        | https://www.spotify.com/download/mac/          |
-| Firefox        | http://www.mozilla.org/en-US/firefox/new/      |
 | Skype          | https://www.skype.com/en/                      |
 | Transmission   | http://www.transmissionbt.com                  |
 | Whatsapp       | https://www.whatsapp.com                       |
