@@ -41,7 +41,7 @@ brew "z"
 cask "1password"
 cask "sublime-text"
 cask "iterm2"
-cask "github-desktop"
+cask "github"
 mas "PCalc", id: 403504866
 cask "spectacle"
 cask "nvalt"
