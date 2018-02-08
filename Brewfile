@@ -61,6 +61,7 @@ cask "whatsapp"
 cask "qlstephen"
 cask "mactex"
 cask "vagrant"
+cask "firefox"
 
 ## Science programs, not usually needed
 # tap "homebrew/science"
