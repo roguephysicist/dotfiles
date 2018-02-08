@@ -61,3 +61,4 @@ Boilerplate apps are my standard set of graphical apps that I use on every compu
 | Skype          | https://www.skype.com/en/                      |
 | Transmission   | http://www.transmissionbt.com                  |
 | Whatsapp       | https://www.whatsapp.com                       |
+| Firefox        | https://www.mozilla.org/en-US/                 |
