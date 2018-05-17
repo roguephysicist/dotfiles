@@ -41,8 +41,7 @@ alias brewx='brew remove'
 ##### Paths #####
 if [[ `uname` == Darwin ]]; then
     export PATH="/Users/sma/anaconda3/bin:$PATH" # Anaconda Python 3.6
-    # export PATH="/Users/sma/anaconda2/bin:$PATH" # Anaconda Python 2.7
-    # export PATH="/usr/local/opt/python/libexec/bin:$PATH" # brew Python 2.7
+    #export PATH="/usr/local/opt/python3/bin:$PATH" # brew Python 3
     :
 elif [[ `hostname` == fat* || `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
     export TINIBA=$HOME/tiniba/
@@ -70,7 +69,6 @@ function plotex() {
         rm -f $name.log
         rm -f $file
     done
-    clear
 }
 
 ## secret - for mounting encrypted drives via the command line
