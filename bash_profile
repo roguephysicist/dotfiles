@@ -21,8 +21,8 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 ##### Aliases #####
-alias ls='ls -h'
-alias ll='ls -lv'
+alias ls='gls -h --color=auto'
+alias ll='gls -lv --color=auto'
 alias lr='ll -R'           # Recursive ls.
 alias la='ll -A'           # Show hidden files.
 alias df='df -H'           # df with human readable sizes
