@@ -16,8 +16,6 @@ brew "curl"
 brew "git"
 brew "diff-pdf"
 brew "exiftool"
-brew "ffmpeg", args: ["with-fdk-aac"]
-brew "gcc"
 brew "gnuplot", args: ["with-cairo", "with-pdflib-lite", "with-qt", "with-wxmac", "with-x11"]
 brew "htop"
 brew "imagemagick"
@@ -25,11 +23,13 @@ brew "mas"
 brew "todo-txt"
 brew "tree"
 brew "vagrant-completion"
-brew "vim", args: ["with-override-system-vi", "without-perl", "without-ruby"]
+brew "vim", args: ["with-override-system-vi"]
 brew "wget"
 brew "z"
 
 ## Tools that only get very sporadic use
+# brew "ffmpeg", args: ["with-fdk-aac"]
+# brew "gcc"
 # brew "gcc", args: ["without-multilib"] # VERY SLOW: ~40 minutes
 # brew "gifsicle"       # handling and optimizing gifs
 # brew "lcdf-typetools" # dealing with Adobe fonts for LaTeX
@@ -63,7 +63,3 @@ cask "qlstephen"
 cask "mactex"
 cask "vagrant"
 cask "firefox"
-
-## Science programs, not usually needed
-# tap "homebrew/science"
-# brew "abinit"
