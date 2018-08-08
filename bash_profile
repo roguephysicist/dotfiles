@@ -21,8 +21,8 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 ##### Aliases #####
-alias ls='ls -h --color=auto'
-alias ll='ls -lv --color=auto'
+alias ls='ls -h'
+alias ll='ls -lv'
 alias lr='ll -R'           # Recursive ls.
 alias la='ll -A'           # Show hidden files.
 alias df='df -H'           # df with human readable sizes
@@ -40,9 +40,9 @@ alias brewx='brew remove'
 
 ##### Paths #####
 if [[ `uname` == Darwin ]]; then
-    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # coreutils
     export PATH="/Users/sma/anaconda3/bin:$PATH" # Anaconda Python 3.6
-    export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH" # coreutils
+    #export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # coreutils
+    #export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH" # coreutils
     #export PATH="/usr/local/opt/python3/bin:$PATH" # brew Python 3
     :
 elif [[ `hostname` == fat* || `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
