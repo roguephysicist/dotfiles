@@ -16,7 +16,7 @@ brew "curl"
 brew "git"
 brew "diff-pdf"
 brew "exiftool"
-brew "gnuplot", args: ["with-cairo", "with-pdflib-lite", "with-qt", "with-wxmac", "with-x11"]
+brew "gnuplot", args: ["with-cairo", "with-qt", "with-wxmac", "with-x11"]
 brew "htop"
 brew "imagemagick"
 brew "mas"
