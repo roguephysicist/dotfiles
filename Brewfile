@@ -20,6 +20,7 @@ brew "gnuplot", args: ["with-cairo", "with-qt", "with-wxmac", "with-x11"]
 brew "htop"
 brew "imagemagick"
 brew "mas"
+brew "povray"
 brew "todo-txt"
 brew "tree"
 brew "vagrant-completion"
