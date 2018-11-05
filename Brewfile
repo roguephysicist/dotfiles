@@ -19,7 +19,7 @@ brew "git"
 # brew "ffmpeg", args: ["with-fdk-aac"]
 # brew "gcc"
 # brew "gifsicle"       # handling and optimizing gifs
-brew "gnuplot", args: ["with-cairo", "with-qt", "with-wxmac", "with-x11"]
+brew "gnuplot", args: ["with-qt", "with-wxmac", "with-x11"]
 brew "htop"
 # brew "imagemagick"
 # brew "innoextract"    # for extracting GOG executables (for old games)
