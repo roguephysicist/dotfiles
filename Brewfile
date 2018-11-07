@@ -38,6 +38,7 @@ brew "z"
 
 ## Install GUI programs using cask
 # cask "1password"
+cask "keepassxc"
 cask "sublime-text"
 cask "iterm2"
 cask "github"
