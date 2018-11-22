@@ -14,15 +14,6 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
 
-##### Aliases #####
-alias ls='ls -h'
-alias ll='ls -lv'
-alias lr='ll -R'           # Recursive ls.
-alias la='ll -A'           # Show hidden files.
-alias df='df -H'           # df with human readable sizes
-alias tree='tree -Csuh'    # Nice alternative to 'recursive ls' ...
-
-
 ##### Paths #####
 if [[ $HOSTNAME == silverhold.local || $HOSTNAME == aesir.local ]]; then
     export PATH="$USER/anaconda3/bin:$PATH" # Anaconda Python 3.6
@@ -39,15 +30,25 @@ if [[ $HOSTNAME == silverhold.local || $HOSTNAME == aesir.local ]]; then
     alias brewu='brew upgrade'
     alias brewU='brew update && brew upgrade'
     alias brewx='brew remove'
+    alias ls='ls -G'
 elif [[ $HOSTNAME == hydra ]]; then
     export PATH="$USER/anaconda3/bin:$PATH" # Anaconda Python 3.6
     [ -f /etc/bash_completion ] && . /etc/bash_completion
+    alias ls='ls --color'
 elif [[ $HOSTNAME == fat* || $HOSTNAME == medusa || $HOSTNAME == hexa* ]]; then ## Paths for medusa
     #export PATH="/opt/science/anaconda3/bin:$PATH" # Anaconda Python 3.6
     export PATH="/opt/science/bin/abinit-8.8.1-intel16.2.181-MPI/bin:$PATH"
     export TINIBA=$HOME/tiniba/
     export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:$PATH"
+    alias ls='ls --color'
 fi
+
+
+##### Aliases #####
+alias ll='ls -lha'
+alias df='df -H'           # df with human readable sizes
+alias tree='tree -Csuh'    # Nice alternative to 'recursive ls' ...
+
 
 ##### Functions #####
 ## gitignore.io - generates awesome gitignores with gi command
