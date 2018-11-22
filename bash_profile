@@ -9,16 +9,10 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 export MANPAGER="less -X"
-export GNUTERM=wxt
+export GNUTERM="wxt noraise"
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-# export HOMEBREW_CC=gcc-6
-# export HOMEBREW_CXX=g++-6
 
-##### Extra sourcing #####
-[ -f /usr/local/etc/profile.d/z.sh ] && . /usr/local/etc/profile.d/z.sh
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 ##### Aliases #####
 alias ls='ls -h'
@@ -27,32 +21,33 @@ alias lr='ll -R'           # Recursive ls.
 alias la='ll -A'           # Show hidden files.
 alias df='df -H'           # df with human readable sizes
 alias tree='tree -Csuh'    # Nice alternative to 'recursive ls' ...
-## brew aliases (mac only)
-alias brewc='brew cleanup'
-alias brewC='brew cleanup --force'
-alias brewi='brew install'
-alias brewl='brew list'
-alias brews='brew search'
-alias brewu='brew upgrade'
-alias brewU='brew update && brew upgrade'
-alias brewx='brew remove'
 
 
 ##### Paths #####
-if [[ `uname` == Darwin ]]; then
-    export PATH="/Users/sma/anaconda3/bin:$PATH" # Anaconda Python 3.6
-    #export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # coreutils
-    #export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH" # coreutils
-    #export PATH="/usr/local/opt/python3/bin:$PATH" # brew Python 3
-    :
-elif [[ `hostname` == fat* || `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
-    #export PATH="/opt/science/intelpython3/bin:$PATH" # Intel Python 3.6
+if [[ $HOSTNAME == silverhold.local || $HOSTNAME == aesir.local ]]; then
+    export PATH="$USER/anaconda3/bin:$PATH" # Anaconda Python 3.6
+    export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+    # export HOMEBREW_CC=gcc-6
+    # export HOMEBREW_CXX=g++-6
+    [ -f /usr/local/etc/profile.d/z.sh ] && . /usr/local/etc/profile.d/z.sh
+    [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+    alias brewc='brew cleanup'
+    alias brewC='brew cleanup --force'
+    alias brewi='brew install'
+    alias brewl='brew list'
+    alias brews='brew search'
+    alias brewu='brew upgrade'
+    alias brewU='brew update && brew upgrade'
+    alias brewx='brew remove'
+elif [[ $HOSTNAME == hydra ]]; then
+    export PATH="$USER/anaconda3/bin:$PATH" # Anaconda Python 3.6
+    [ -f /etc/bash_completion ] && . /etc/bash_completion
+elif [[ $HOSTNAME == fat* || $HOSTNAME == medusa || $HOSTNAME == hexa* ]]; then ## Paths for medusa
     #export PATH="/opt/science/anaconda3/bin:$PATH" # Anaconda Python 3.6
     export PATH="/opt/science/bin/abinit-8.8.1-intel16.2.181-MPI/bin:$PATH"
     export TINIBA=$HOME/tiniba/
     export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:$PATH"
 fi
-
 
 ##### Functions #####
 ## gitignore.io - generates awesome gitignores with gi command
