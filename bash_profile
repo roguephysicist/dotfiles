@@ -47,7 +47,7 @@ if [[ `uname` == Darwin ]]; then
     :
 elif [[ `hostname` == fat* || `hostname` == medusa || `hostname` == hexa* || `hostname` == quad* ]]; then ## Paths for medusa
     #export PATH="/opt/science/intelpython3/bin:$PATH" # Intel Python 3.6
-    export PATH="/opt/science/anaconda3/bin:$PATH" # Anaconda Python 3.6
+    #export PATH="/opt/science/anaconda3/bin:$PATH" # Anaconda Python 3.6
     export PATH="/opt/science/bin/abinit-8.8.1-intel16.2.181-MPI/bin:$PATH"
     export TINIBA=$HOME/tiniba/
     export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:$PATH"
