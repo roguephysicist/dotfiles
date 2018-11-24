@@ -16,7 +16,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 ##### Paths #####
 if [[ $HOSTNAME == silverhold.local || $HOSTNAME == aesir.local ]]; then
-    export PATH="$USER/anaconda3/bin:$PATH" # Anaconda Python 3.6
+    export PATH="$HOME/anaconda3/bin:$PATH" # Anaconda Python 3.6
     export HOMEBREW_CASK_OPTS="--appdir=/Applications"
     # export HOMEBREW_CC=gcc-6
     # export HOMEBREW_CXX=g++-6
@@ -32,7 +32,7 @@ if [[ $HOSTNAME == silverhold.local || $HOSTNAME == aesir.local ]]; then
     alias brewx='brew remove'
     alias ls='ls -G'
 elif [[ $HOSTNAME == hydra ]]; then
-    export PATH="$USER/anaconda3/bin:$PATH" # Anaconda Python 3.6
+    export PATH="$HOME/anaconda3/bin:$PATH" # Anaconda Python 3.6
     [ -f /etc/bash_completion ] && . /etc/bash_completion
     alias ls='ls --color'
 elif [[ $HOSTNAME == fat* || $HOSTNAME == medusa || $HOSTNAME == hexa* ]]; then ## Paths for medusa
