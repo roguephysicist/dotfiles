@@ -9,7 +9,7 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 export MANPAGER="less -X"
-export GNUTERM="qt"
+export GNUTERM="wxt"
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
