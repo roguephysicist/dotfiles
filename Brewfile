@@ -32,7 +32,7 @@ brew "mas"
 # brew "todo-txt"
 brew "tree"
 # brew "vagrant-completion"
-brew "vim", args: ["with-override-system-vi"]
+brew "vim"
 brew "wget"
 brew "z"
 
