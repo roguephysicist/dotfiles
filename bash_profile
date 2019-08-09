@@ -31,7 +31,7 @@ if [[ $HOSTNAME == silverhold.local || $HOSTNAME == aesir.local ]]; then
     alias brewU='brew update && brew upgrade'
     alias brewx='brew remove'
     alias ls='ls -G'
-elif [[ $HOSTNAME == hydra ]]; then
+elif [[ $HOSTNAME == hydra || $HOSTNAME == coldstone ]]; then
     export PATH="$HOME/anaconda3/bin:$PATH" # Anaconda Python 3.6
     [ -f /etc/bash_completion ] && . /etc/bash_completion
     alias ls='ls --color'
@@ -72,7 +72,7 @@ function plotex() {
     done
 }
 
-## secret - for mounting encrypted drives via the command line
+## secret - for mounting encrypted drives via the command line (mac only)
 function secret() {
     hdiutil attach $1 -stdinpass
 }
