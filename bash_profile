@@ -15,21 +15,11 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 
 ##### Paths #####
-if [[ $HOSTNAME == silverhold.local || $HOSTNAME == aesir.local ]]; then
+if [[ $HOSTNAME == silverhold || $HOSTNAME == aesir ]]; then
     export PATH="$HOME/anaconda3/bin:$PATH" # Anaconda Python 3.6
-    export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-    # export HOMEBREW_CC=gcc-6
-    # export HOMEBREW_CXX=g++-6
-    [ -f /usr/local/etc/profile.d/z.sh ] && . /usr/local/etc/profile.d/z.sh
-    [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-    alias brewc='brew cleanup'
-    alias brewC='brew cleanup --force'
-    alias brewi='brew install'
-    alias brewl='brew list'
-    alias brews='brew search'
-    alias brewu='brew upgrade'
-    alias brewU='brew update && brew upgrade'
-    alias brewx='brew remove'
+    export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+    [ -f /opt/local/etc/profile.d/z.sh ] && . /opt/local/etc/profile.d/z.sh
+    [ -f /opt/local/etc/profile.d/bash_completion.sh ] && . /opt/local/etc/profile.d/bash_completion.sh
     alias ls='ls -G'
 elif [[ $HOSTNAME == hydra || $HOSTNAME == coldstone ]]; then
     export PATH="$HOME/anaconda3/bin:$PATH" # Anaconda Python 3.6

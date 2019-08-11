@@ -15,39 +15,60 @@ defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
 
 Standard utilities and programs
 -----------
-Almost everything is installed using Homebrew and Homebrew-Cask, including CLI and GUI programs. To install everything from a fresh macOS, the procedure is as follows:
+Command line programs are installed using MacPorts. To install everything from a fresh macOS, the procedure is as follows:
 
-1. Install Xcode Command Line Tools with `xcode-select --install`
-2. Install [Homebrew](https://brew.sh)
-3. Install the tools in the [Brewfile](./Brewfile) with `brew tap homebrew/bundle && brew bundle`
-
-Things should be installed in the specified order; for example, Xcode provides all the necessary compilers for installing programs with Homebrew. A list of installed GUI apps is included in the next section. Remember to clean your system after running the above in order to recover a significant amount of space:
+1. Install Xcode (full and command line tools).
+2. Follow instructions from the [MacPorts website](https://www.macports.org/install.php).
+3. Install utilities using MacPorts:
 
 ```
-brew cleanup; brew cleanup -s; brew cask cleanup
+sudo port install ack \
+                  bash \
+                  bash-completion \
+                  curl \
+                  gcc10 \
+                  git \
+                  gnuplot \
+                  htop \
+                  tree \
+                  vim \
+                  wget \
+                  xorg-server \
+                  z
 ```
 
-There are two additional programs that should be installed outside of Homewbrew:
+Other optional utils:
 
-* [Anaconda Python](https://www.anaconda.com)
-* [pdftk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.11-setup.pkg)
+```
+coreutils      # updated shell/system utils
+diff-pdf       # visually compares to pdf files for differences
+exiftool       # image metadata handling
+ffmpeg         # a/v handling, 'with-fdk-aac' for ALAC
+gifsicle       # handling and optimizing gifs
+imagemagick    # convert, edit, or compose bitmap images
+lcdf-typetools # dealing with Adobe fonts for LaTeX
+pandoc         # converting between document formats
+potrace        # creating vector images of signatures
+povray         # for ray-tracing, especially for 3D visualizations
+tesseract      # process image files into text with OCR
+```
+
+Additionally, I use [Anaconda Python](https://www.anaconda.com) for scientific Python development.
 
 Lastly, linking the Sublime Text 3 configuration files and synchronizing them through Dropbox is detailed [here](https://packagecontrol.io/docs/syncing#dropbox-osx).
 
 
 Boilerplate
 -----------
-Boilerplate apps are my standard set of graphical apps that I use on every computer. These are installed automatically using Homebrew-Cask (see the [Brewfile](./Brewfile)).
+Boilerplate apps are my standard set of graphical apps that I use on every computer.
 
 | Application    | Website                                        |
 |----------------|------------------------------------------------|
-| 1Password 6    | https://agilebits.com/onepassword              |
+| Firefox        | https://www.mozilla.org/en-US/                 |
 | Sublime Text 3 | http://www.sublimetext.com                     |
 | iTerm 2        | http://www.iterm2.com/                         |
 | Github for Mac | https://mac.github.com                         |
-| PCalc 4        | http://www.pcalc.com                           |
 | Spectacle      | http://spectacleapp.com                        |
-| nvALT          | http://brettterpstra.com/projects/nvalt/       |
 | Skim           | http://skim-app.sourceforge.net                |
 | Zotero         | https://www.zotero.org                         |
 | Dropbox        | https://www.dropbox.com                        |
@@ -55,10 +76,10 @@ Boilerplate apps are my standard set of graphical apps that I use on every compu
 | Keka           | http://www.kekaosx.com/en/                     |
 | AppCleaner     | http://freemacsoft.net/appcleaner/             |
 | R-Name         | https://www.macupdate.com/app/mac/12259/r-name |
-| VirtualBox     | https://www.virtualbox.org                     |
 | VLC            | http://www.videolan.org/vlc/index.html         |
 | Spotify        | https://www.spotify.com/download/mac/          |
 | Skype          | https://www.skype.com/en/                      |
 | Transmission   | http://www.transmissionbt.com                  |
-| Whatsapp       | https://www.whatsapp.com                       |
-| Firefox        | https://www.mozilla.org/en-US/                 |
+| KeepassXC      | https://keepassxc.org/                         |
+| Cryptomator    | https://cryptomator.org/                       |
+| 1Password 6    | https://agilebits.com/onepassword              |
