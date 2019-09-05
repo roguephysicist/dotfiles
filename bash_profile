@@ -21,12 +21,10 @@ if [[ $HOSTNAME == silverhold || $HOSTNAME == aesir ]]; then
     [ -f /opt/local/etc/profile.d/z.sh ] && . /opt/local/etc/profile.d/z.sh
     [ -f /opt/local/etc/profile.d/bash_completion.sh ] && . /opt/local/etc/profile.d/bash_completion.sh
     alias ls='ls -G'
-elif [[ $HOSTNAME == hydra || $HOSTNAME == coldstone ]]; then
-    export PATH="$HOME/anaconda3/bin:$PATH" # Anaconda Python 3.6
+elif [[ $HOSTNAME == hydra || $HOSTNAME == coldstone || $HOSTNAME == zarathustra ]]; then
     [ -f /etc/bash_completion ] && . /etc/bash_completion
     alias ls='ls --color'
 elif [[ $HOSTNAME == fat* || $HOSTNAME == medusa || $HOSTNAME == hexa* ]]; then ## Paths for medusa
-    #export PATH="/opt/science/anaconda3/bin:$PATH" # Anaconda Python 3.6
     export PATH="/opt/science/bin/abinit-8.8.1-intel16.2.181-MPI/bin:$PATH"
     export TINIBA=$HOME/tiniba/
     export PATH="$TINIBA/clustering/itaxeo:$TINIBA/utils:$PATH"
