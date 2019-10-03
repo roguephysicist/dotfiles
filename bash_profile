@@ -17,7 +17,6 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 ##### Paths #####
 if [[ $HOSTNAME == aesir.local ]]; then
     export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-    export PATH="$HOME/anaconda3/bin:$PATH" # Anaconda Python 3.6
     [ -f /opt/local/etc/profile.d/z.sh ] && . /opt/local/etc/profile.d/z.sh
     # bash-completion
     if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
