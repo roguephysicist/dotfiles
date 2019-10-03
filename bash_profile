@@ -15,11 +15,14 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 
 ##### Paths #####
-if [[ $HOSTNAME == silverhold || $HOSTNAME == aesir ]]; then
-    export PATH="$HOME/anaconda3/bin:$PATH" # Anaconda Python 3.6
+if [[ $HOSTNAME == aesir.local ]]; then
     export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+    export PATH="$HOME/anaconda3/bin:$PATH" # Anaconda Python 3.6
     [ -f /opt/local/etc/profile.d/z.sh ] && . /opt/local/etc/profile.d/z.sh
-    [ -f /opt/local/etc/profile.d/bash_completion.sh ] && . /opt/local/etc/profile.d/bash_completion.sh
+    # bash-completion
+    if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+        . /opt/local/etc/profile.d/bash_completion.sh
+    fi
     alias ls='ls -G'
 elif [[ $HOSTNAME == hydra || $HOSTNAME == coldstone || $HOSTNAME == zarathustra ]]; then
     [ -f /etc/bash_completion ] && . /etc/bash_completion
