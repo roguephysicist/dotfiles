@@ -1,27 +1,28 @@
 ##### Exports #####
-export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"' # sets tab and window titles
-export PS1="\[\e[37m\][\[\e[m\]\[\e[37m\]\h\[\e[m\]\[\e[37m\]]\[\e[m\] \[\e[31m\]\W\[\e[m\] \[\e[37m\]\\$\[\e[m\] "
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-export EDITOR="vim"
+
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"' # sets tab and window titles
+export PS1="\[\e[37m\][\[\e[m\]\[\e[37m\]\h\[\e[m\]\[\e[37m\]]\[\e[m\] \[\e[31m\]\W\[\e[m\] \[\e[37m\]\\$\[\e[m\] "
+
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
 export MANPAGER="less -X"
+export EDITOR="vim"
 export GNUTERM="wxt noraise"
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
 
 
 ##### Paths #####
 if [[ $HOSTNAME == aesir.local ]]; then
     export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
     [ -f /opt/local/etc/profile.d/z.sh ] && . /opt/local/etc/profile.d/z.sh
-    # bash-completion
-    if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
-        . /opt/local/etc/profile.d/bash_completion.sh
-    fi
+    [ -f /opt/local/etc/profile.d/bash_completion.sh ] && . /opt/local/etc/profile.d/bash_completion.sh
     alias ls='ls -G'
 elif [[ $HOSTNAME == hydra || $HOSTNAME == coldstone || $HOSTNAME == zarathustra ]]; then
     [ -f /etc/bash_completion ] && . /etc/bash_completion
@@ -41,10 +42,6 @@ alias tree='tree -Csuh'    # Nice alternative to 'recursive ls' ...
 
 
 ##### Functions #####
-## gitignore.io - generates awesome gitignores with gi command
-function gi() {
-    curl -L -s https://www.gitignore.io/api/$@ ;
-}
 
 ## plotex - for creating plots in pdf from gnuplot epslatex files
 function plotex() {
@@ -60,9 +57,4 @@ function plotex() {
         rm -f $name.log
         rm -f $file
     done
-}
-
-## secret - for mounting encrypted drives via the command line (mac only)
-function secret() {
-    hdiutil attach $1 -stdinpass
 }
