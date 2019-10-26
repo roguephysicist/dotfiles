@@ -6,3 +6,4 @@ ln -sf $PWD/bash_profile    $HOME/.bash_profile
 ln -sf $PWD/gitconfig       $HOME/.gitconfig
 ln -sf $PWD/gitignore       $HOME/.gitignore
 ln -sf $PWD/screenrc        $HOME/.screenrc
+ln -sf $PWD/vimrc           $HOME/.vimrc
