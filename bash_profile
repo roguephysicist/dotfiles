@@ -45,16 +45,11 @@ alias tree='tree -Csuh'    # Nice alternative to 'recursive ls' ...
 
 ## plotex - for creating plots in pdf from gnuplot epslatex files
 function plotex() {
-    local tex=(`grep "set output" $1 | grep -v '\#' | awk -F\' '{print $(NF-1)}'`)
     gnuplot $1
-    for file in ${tex[@]}; do
-        local name=`basename $file .tex`
+    for f in $(awk -F\' '/set output/ && /^[^#]/{print $2}' $1); do
+        local name=$(basename $f .tex)
         epstopdf $name-inc.eps
-        pdflatex -interaction=batchmode $file
-        rm -f $name-inc.eps
-        rm -f $name-inc.pdf
-        rm -f $name.aux
-        rm -f $name.log
-        rm -f $file
+        pdflatex -interaction=batchmode $f
+        rm -f $name{-inc.eps,-inc.pdf,.aux,.log} $f
     done
 }
