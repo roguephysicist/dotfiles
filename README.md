@@ -72,14 +72,9 @@ Boilerplate apps are my standard set of graphical apps that I use on every compu
 | Skim           | http://skim-app.sourceforge.net                |
 | Zotero         | https://www.zotero.org                         |
 | Dropbox        | https://www.dropbox.com                        |
-| Daisydisk      | http://www.daisydiskapp.com                    |
 | Keka           | http://www.kekaosx.com/en/                     |
 | AppCleaner     | http://freemacsoft.net/appcleaner/             |
 | R-Name         | https://www.macupdate.com/app/mac/12259/r-name |
-| VLC            | http://www.videolan.org/vlc/index.html         |
-| Spotify        | https://www.spotify.com/download/mac/          |
-| Skype          | https://www.skype.com/en/                      |
 | Transmission   | http://www.transmissionbt.com                  |
 | KeepassXC      | https://keepassxc.org/                         |
 | Cryptomator    | https://cryptomator.org/                       |
-| 1Password 6    | https://agilebits.com/onepassword              |
