@@ -13,9 +13,9 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
 ```
 
-Standard utilities and programs
+Standard utilities and programs for MacOS
 -----------
-Command line programs are installed using MacPorts. To install everything from a fresh macOS, the procedure is as follows:
+Command line programs are installed using MacPorts. To install everything on a fresh macOS, the procedure is as follows:
 
 1. Install Xcode (full and command line tools).
 2. Follow instructions from the [MacPorts website](https://www.macports.org/install.php).
@@ -56,25 +56,3 @@ tesseract      # process image files into text with OCR
 Additionally, I use [Anaconda Python](https://www.anaconda.com) for scientific Python development.
 
 Lastly, linking the Sublime Text 3 configuration files and synchronizing them through Dropbox is detailed [here](https://packagecontrol.io/docs/syncing#dropbox-osx).
-
-
-Boilerplate
------------
-Boilerplate apps are my standard set of graphical apps that I use on every computer.
-
-| Application    | Website                                        |
-|----------------|------------------------------------------------|
-| Firefox        | https://www.mozilla.org/en-US/                 |
-| Sublime Text 3 | http://www.sublimetext.com                     |
-| iTerm 2        | http://www.iterm2.com/                         |
-| Github for Mac | https://mac.github.com                         |
-| Spectacle      | http://spectacleapp.com                        |
-| Skim           | http://skim-app.sourceforge.net                |
-| Zotero         | https://www.zotero.org                         |
-| Dropbox        | https://www.dropbox.com                        |
-| Keka           | http://www.kekaosx.com/en/                     |
-| AppCleaner     | http://freemacsoft.net/appcleaner/             |
-| R-Name         | https://www.macupdate.com/app/mac/12259/r-name |
-| Transmission   | http://www.transmissionbt.com                  |
-| KeepassXC      | https://keepassxc.org/                         |
-| Cryptomator    | https://cryptomator.org/                       |

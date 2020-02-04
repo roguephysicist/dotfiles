@@ -20,7 +20,7 @@ export GNUTERM="wxt noraise"
 
 ##### Paths #####
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    [ -f /etc/bash_completion ] && . /etc/bash_completion
+    [ -f /etc/profile.d/bash_completion.sh ] && . /etc/profile.d/bash_completion.sh
     alias ls='ls --color'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
