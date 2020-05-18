@@ -1,11 +1,27 @@
 Dotfiles
 ========
 
-A repo that contains my set-up of dotfiles, suited for both macOS and Linux. It also contains information about the software I install and use on a daily basis.
+A repo that contains my set-up of dotfiles, suited for both macOS and Linux. It
+also contains information about the software I install and use on a daily
+basis.
 
-Run `link.sh` to link the dotfiles to your home directory.
 
-On macOS, I immediately change the following keyboard settings:
+## Usage
+
+Additionally, I use [Anaconda Python](https://www.anaconda.com) for scientific
+Python development.
+
+Lastly, linking the Sublime Text 3 configuration files and synchronizing them
+through Dropbox is detailed
+[here](https://packagecontrol.io/docs/syncing#dropbox-osx).
+
+
+## macOS Particulars
+
+
+### Built-in macOS options
+
+I change the following keyboard settings,
 
 ```
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
@@ -13,31 +29,35 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
 ```
 
-Standard utilities and programs for MacOS
------------
-Command line programs are installed using MacPorts. To install everything on a fresh macOS, the procedure is as follows:
 
-1. Install Xcode (full and command line tools).
-2. Follow instructions from the [MacPorts website](https://www.macports.org/install.php).
-3. Install utilities using MacPorts:
+### Standard utilities and programs for MacOS
+
+macOS has no official package manager or even a standard way for installing
+software from the command line. Various utilities exist to help solve this
+problem, each with their own set of pros and cons. In my experience, Homebrew
+is generally the *least painful* to use on a daily basis. Installation is
+straightforward:
+
+1. Install Xcode command line tools (`xcode-select --install`).
+2. Follow instructions from the [Homebrew website](https://brew.sh).
+3. Install programs:
 
 ```
-sudo port install ack \
-                  bash \
-                  bash-completion \
-                  curl \
-                  gcc10 \
-                  git \
-                  gnuplot \
-                  htop \
-                  tree \
-                  vim \
-                  wget \
-                  xorg-server \
-                  z
+brew install ack \
+             bash \
+             bash-completion \
+             curl \
+             gcc \
+             git \
+             gnuplot \
+             htop \
+             tree \
+             vim \
+             wget \
+             z
 ```
 
-Other optional utils:
+There are many other tools that I don't use on a regular basis:
 
 ```
 coreutils      # updated shell/system utils
@@ -53,6 +73,34 @@ povray         # for ray-tracing, especially for 3D visualizations
 tesseract      # process image files into text with OCR
 ```
 
-Additionally, I use [Anaconda Python](https://www.anaconda.com) for scientific Python development.
 
-Lastly, linking the Sublime Text 3 configuration files and synchronizing them through Dropbox is detailed [here](https://packagecontrol.io/docs/syncing#dropbox-osx).
+### Gnuplot
+
+Homebrew can install Gnuplot, the resulting binary has a buggy autocomplete
+functionality that makes it completely unusable. I suggest using `brew` to
+install its dependencies, then manually compile Gnuplot from source. The
+`configure` script should correctly autodetect the dependencies installed with
+`brew`.
+
+```
+# Homebrew prefix
+HBPRE="$(brew --prefix)"
+
+# Install dependencies
+brew install gd libcerf pango cairo readline libcaca pkgconfig wxwidgets
+
+# Configure with correct readline and ncurses
+./configure LDFLAGS="-L${HBPRE}/opt/readline/lib -L${HBPRE}/opt/ncurses/lib" \
+            CPPFLAGS="-I${HBPRE}/opt/readline/include -I${HBPRE}/opt/ncurses/include" \
+            --with-readline=gnu
+
+# Make and install in /usr/local/bin
+make
+sudo make install
+
+# Fix jumbled fonts (https://stackoverflow.com/questions/57698204/gnuplot-pdf-terminal-exhibits-font-issues-on-mac)
+brew uninstall --ignore-dependencies pango
+brew install iltommi/brews/pango
+```
+
+This will yield a fully working version of Gnuplot.

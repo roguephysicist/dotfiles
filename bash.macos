@@ -17,27 +17,23 @@ export MANPAGER="less -X"
 export EDITOR="vim"
 export GNUTERM="wxt"
 
-##### Paths #####
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    [ -f /etc/profile.d/bash_completion.sh ] && . /etc/profile.d/bash_completion.sh
-    alias ls='ls --color'
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+
+##### Homebrew #####
 if type brew &>/dev/null; then
-  HOMEBREW_PREFIX="$(brew --prefix)"
-  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
-    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
-  else
-    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*; do
-      [[ -r "$COMPLETION" ]] && source "$COMPLETION"
-    done
-  fi
-fi
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-#alias ls='ls -G'
+    HOMEBREW_PREFIX="$(brew --prefix)"
+    PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
+    if [ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]; then
+        source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+    else
+        for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*; do
+            [ -r "$COMPLETION" ] && source "$COMPLETION"
+        done
+    fi
 fi
 
 
 ##### Aliases #####
+alias ls='ls --color'
 alias ll='ls -lha'
 alias df='df -H'           # df with human readable sizes
 alias tree='tree -Csuh'    # Nice alternative to 'recursive ls' ...

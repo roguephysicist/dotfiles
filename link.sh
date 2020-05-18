@@ -2,8 +2,8 @@
 # A very direct script for linking files into your Home directory.
 # Add files as needed.
 
-ln -sf $PWD/bash_profile    $HOME/.bash_profile
-ln -sf $PWD/gitconfig       $HOME/.gitconfig
-ln -sf $PWD/gitignore       $HOME/.gitignore
-ln -sf $PWD/screenrc        $HOME/.screenrc
-ln -sf $PWD/vimrc           $HOME/.vimrc
+ln -isf $PWD/bash.linux     $HOME/.bashrc
+ln -isf $PWD/rc.d/gitconfig $HOME/.gitconfig
+ln -isf $PWD/rc.d/gitignore $HOME/.gitignore
+ln -isf $PWD/rc.d/screenrc  $HOME/.screenrc
+ln -isf $PWD/rc.d/vimrc     $HOME/.vimrc
