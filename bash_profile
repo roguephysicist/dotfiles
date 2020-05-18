@@ -22,10 +22,18 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     [ -f /etc/profile.d/bash_completion.sh ] && . /etc/profile.d/bash_completion.sh
     alias ls='ls --color'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-    [ -f /opt/local/etc/profile.d/z.sh ] && . /opt/local/etc/profile.d/z.sh
-    [ -f /opt/local/etc/profile.d/bash_completion.sh ] && . /opt/local/etc/profile.d/bash_completion.sh
-    alias ls='ls -G'
+if type brew &>/dev/null; then
+  HOMEBREW_PREFIX="$(brew --prefix)"
+  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  else
+    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*; do
+      [[ -r "$COMPLETION" ]] && source "$COMPLETION"
+    done
+  fi
+fi
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+#alias ls='ls -G'
 fi
 
 
