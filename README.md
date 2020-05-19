@@ -1,18 +1,17 @@
-Dotfiles
-========
+# Dotfiles
 
-A repo that contains my set-up of dotfiles, suited for both macOS and Linux. It
-also contains information about the software I install and use on a daily
-basis.
+A repo that contains my dotfiles that are suitable for both Linux and macOS.
 
 
 ## Usage
 
-Additionally, I use [Anaconda Python](https://www.anaconda.com) for scientific
-Python development.
+Simply run `make linux` or `make macos` depending on your OS. `make clean` will
+safely unlink the dotfiles.
 
-Lastly, linking the Sublime Text 3 configuration files and synchronizing them
-through Dropbox is detailed
+Additionally, I use [Anaconda Python](https://www.anaconda.org) for scientific
+Python development; both the full distribution and `miniconda`. I also use
+Sublime Text 3 as my primary text editor. Read about linking its configuration
+files and synchronizing them through cloud storage
 [here](https://packagecontrol.io/docs/syncing#dropbox-osx).
 
 

@@ -1,3 +1,7 @@
+
+
+
+
 ##### Exports #####
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
@@ -18,10 +22,17 @@ export EDITOR="vim"
 export GNUTERM="wxt"
 
 
-##### Homebrew #####
+##### Aliases #####
+alias ls='ls --color'
+alias ll='ls -lha'
+alias df='df -H'           # df with human readable sizes
+alias tree='tree -Csuh'    # Nice alternative to 'recursive ls' ...
+
+
+##### Homebrew and completions #####
 if type brew &>/dev/null; then
     HOMEBREW_PREFIX="$(brew --prefix)"
-    PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
+    export PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
     if [ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]; then
         source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
     else
@@ -32,17 +43,12 @@ if type brew &>/dev/null; then
 fi
 
 
-##### Aliases #####
-alias ls='ls --color'
-alias ll='ls -lha'
-alias df='df -H'           # df with human readable sizes
-alias tree='tree -Csuh'    # Nice alternative to 'recursive ls' ...
+##### Paths #####
+export PATH="${HOME}/miniconda3/bin:$PATH"
 
 
 ##### Functions #####
-
-## plotex - for creating plots in pdf from gnuplot epslatex files
-function plotex() {
+function plotex() { # plotex - for creating plots from gnuplot epslatex to pdf
     gnuplot $1
     for f in $(awk -F\' '/set output/ && /^[^#]/{print $2}' $1); do
         local name=$(basename $f .tex)
