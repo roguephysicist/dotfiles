@@ -6,7 +6,7 @@
 	user = roguephysicist
 
 [core]
-	excludesfile = /Users/sma/.gitignore
+	excludesfile = ~/.gitignore
     editor = vim
 	ignorecase = false
 
