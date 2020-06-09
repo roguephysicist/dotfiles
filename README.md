@@ -15,6 +15,22 @@ files and synchronizing them through cloud storage
 [here](https://packagecontrol.io/docs/syncing#dropbox-osx).
 
 
+## Linux Particulars
+
+### Gnuplot
+
+The Gnuplot binary that comes packaged with most distros has a buggy readline
+implementation that makes autocomplete totally unusable. It is easy to compile
+from source after installing the necessary software,
+
+```sh
+dnf install g++ wxGTK3-devel readline-devel gd-devel libcerf-devel
+```
+
+which enables the `wxt` interactive terminal within Gnuplot, along with a few
+other features.
+
+
 ## macOS Particulars
 
 
