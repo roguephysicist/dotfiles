@@ -64,7 +64,6 @@ brew install ack \
              curl \
              gcc \
              git \
-             gnuplot \
              htop \
              tree \
              vim \
@@ -102,7 +101,7 @@ install its dependencies, then manually compile Gnuplot from source. The
 HBPRE="$(brew --prefix)"
 
 # Install dependencies
-brew install gd libcerf pango cairo readline libcaca pkgconfig wxwidgets
+brew install gd libcerf pango cairo readline ncurses libcaca pkgconfig wxwidgets
 
 # Configure with correct readline and ncurses
 ./configure LDFLAGS="-L${HBPRE}/opt/readline/lib -L${HBPRE}/opt/ncurses/lib" \
