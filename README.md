@@ -61,30 +61,58 @@ straightforward:
 brew install ack \
              bash \
              bash-completion \
+             coreutils \
              curl \
+             diff-pdf \
+             exiftool \
+             ffmpeg \
              gcc \
              git \
              htop \
+             imagemagick \
+             jq \
+             lolcat \
+             make \
+             ncdu \
+             pandoc \
+             poppler \
+             python@3.11 \
+             scrcpy \
              tree \
+             ttyplot \
              vim \
              wget \
              z
 ```
 
-There are many other tools that I don't use on a regular basis:
+There are many other tools that I don't use on a regular basis but are also quite useful:
 
 ```
-coreutils      # updated shell/system utils
-diff-pdf       # visually compares to pdf files for differences
-exiftool       # image metadata handling
-ffmpeg         # a/v handling, 'with-fdk-aac' for ALAC
 gifsicle       # handling and optimizing gifs
-imagemagick    # convert, edit, or compose bitmap images
 lcdf-typetools # dealing with Adobe fonts for LaTeX
-pandoc         # converting between document formats
 potrace        # creating vector images of signatures
 povray         # for ray-tracing, especially for 3D visualizations
 tesseract      # process image files into text with OCR
+```
+
+
+### Python
+
+Python modules are essential for many tasks now.
+
+```sh
+pip3 install matplotlib \
+             numpy \
+             pandas \
+             PyOpenGL \
+             PyQt6 \
+             pyqtgraph \
+             python-kasa \
+             PyYAML \
+             ruamel.yaml \
+             ruamel.yaml.clib \
+             Sphinx \
+             sphinx-rtd-theme
 ```
 
 
@@ -106,15 +134,17 @@ brew install gd libcerf pango cairo readline ncurses libcaca pkgconfig wxwidgets
 # Configure with correct readline and ncurses
 ./configure LDFLAGS="-L${HBPRE}/opt/readline/lib -L${HBPRE}/opt/ncurses/lib" \
             CPPFLAGS="-I${HBPRE}/opt/readline/include -I${HBPRE}/opt/ncurses/include" \
-            --with-readline=gnu
+            --with-readline=gnu \
+            --prefix="/opt/gnuplot"
 
 # Make and install in /usr/local/bin
 make
+make check
 sudo make install
 
-# Fix jumbled fonts (https://stackoverflow.com/questions/57698204/gnuplot-pdf-terminal-exhibits-font-issues-on-mac)
-brew uninstall --ignore-dependencies pango
-brew install iltommi/brews/pango
+# Fix jumbled fonts (https://stackoverflow.com/questions/57698204/gnuplot-pdf-terminal-exhibits-font-issues-on-mac) (OBSOLETE?  )
+# brew uninstall --ignore-dependencies pango
+# brew install iltommi/brews/pango
 ```
 
 This will yield a fully working version of Gnuplot.
