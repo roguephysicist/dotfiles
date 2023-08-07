@@ -61,30 +61,58 @@ straightforward:
 brew install ack \
              bash \
              bash-completion \
+             coreutils \
              curl \
+             diff-pdf \
+             exiftool \
+             ffmpeg \
              gcc \
              git \
              htop \
+             imagemagick \
+             jq \
+             lolcat \
+             make \
+             ncdu \
+             pandoc \
+             poppler \
+             python@3.11 \
+             scrcpy \
              tree \
+             ttyplot \
              vim \
              wget \
              z
 ```
 
-There are many other tools that I don't use on a regular basis:
+There are many other tools that I don't use on a regular basis but are also quite useful:
 
 ```
-coreutils      # updated shell/system utils
-diff-pdf       # visually compares to pdf files for differences
-exiftool       # image metadata handling
-ffmpeg         # a/v handling, 'with-fdk-aac' for ALAC
 gifsicle       # handling and optimizing gifs
-imagemagick    # convert, edit, or compose bitmap images
 lcdf-typetools # dealing with Adobe fonts for LaTeX
-pandoc         # converting between document formats
 potrace        # creating vector images of signatures
 povray         # for ray-tracing, especially for 3D visualizations
 tesseract      # process image files into text with OCR
+```
+
+
+### Python
+
+Python modules are essential for many tasks now.
+
+```sh
+pip3 install matplotlib \
+             numpy \
+             pandas \
+             PyOpenGL \
+             PyQt6 \
+             pyqtgraph \
+             python-kasa \
+             PyYAML \
+             ruamel.yaml \
+             ruamel.yaml.clib \
+             Sphinx \
+             sphinx-rtd-theme
 ```
 
 
@@ -104,17 +132,14 @@ HBPRE="$(brew --prefix)"
 brew install gd libcerf pango cairo readline ncurses libcaca pkgconfig wxwidgets libsvg-cairo
 
 # Configure with correct readline and ncurses
-./configure LDFLAGS="-L${HBPRE}/opt/readline/lib \
-                     -L${HBPRE}/opt/ncurses/lib \
-                     -L${HBPRE}/lib" \
-            CPPFLAGS="-I${HBPRE}/opt/readline/include \
-                      -I${HBPRE}/opt/ncurses/include \
-                      -I${HBPRE}/Cellar/cairo/1.16.0_5/include/" \
+./configure LDFLAGS="-L${HBPRE}/opt/readline/lib -L${HBPRE}/opt/ncurses/lib" \
+            CPPFLAGS="-I${HBPRE}/opt/readline/include -I${HBPRE}/opt/ncurses/include" \
             --with-readline=gnu \
-            --prefix=/opt/gnuplot/5.4.3
+            --prefix="/opt/gnuplot"
 
 # Make and install in /usr/local/bin
 make
+make check
 sudo make install
 ```
 
