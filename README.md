@@ -101,20 +101,21 @@ install its dependencies, then manually compile Gnuplot from source. The
 HBPRE="$(brew --prefix)"
 
 # Install dependencies
-brew install gd libcerf pango cairo readline ncurses libcaca pkgconfig wxwidgets
+brew install gd libcerf pango cairo readline ncurses libcaca pkgconfig wxwidgets libsvg-cairo
 
 # Configure with correct readline and ncurses
-./configure LDFLAGS="-L${HBPRE}/opt/readline/lib -L${HBPRE}/opt/ncurses/lib" \
-            CPPFLAGS="-I${HBPRE}/opt/readline/include -I${HBPRE}/opt/ncurses/include" \
-            --with-readline=gnu
+./configure LDFLAGS="-L${HBPRE}/opt/readline/lib \
+                     -L${HBPRE}/opt/ncurses/lib \
+                     -L${HBPRE}/lib" \
+            CPPFLAGS="-I${HBPRE}/opt/readline/include \
+                      -I${HBPRE}/opt/ncurses/include \
+                      -I${HBPRE}/Cellar/cairo/1.16.0_5/include/" \
+            --with-readline=gnu \
+            --prefix=/opt/gnuplot/5.4.3
 
 # Make and install in /usr/local/bin
 make
 sudo make install
-
-# Fix jumbled fonts (https://stackoverflow.com/questions/57698204/gnuplot-pdf-terminal-exhibits-font-issues-on-mac)
-brew uninstall --ignore-dependencies pango
-brew install iltommi/brews/pango
 ```
 
 This will yield a fully working version of Gnuplot.
