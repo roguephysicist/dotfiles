@@ -76,7 +76,7 @@ brew install ack \
              ncdu \
              pandoc \
              poppler \
-             python@3.11 \
+             python \
              scrcpy \
              tree \
              ttyplot \
@@ -95,24 +95,30 @@ povray         # for ray-tracing, especially for 3D visualizations
 tesseract      # process image files into text with OCR
 ```
 
+If you want to remove caches and clean stuff up:
+
+```sh
+brew cleanup -s && brew cleanup --prune=all
+```
+
 
 ### Python
 
 Python modules are essential for many tasks now.
 
 ```sh
-pip3 install matplotlib \
-             numpy \
-             pandas \
-             PyOpenGL \
-             PyQt6 \
-             pyqtgraph \
-             python-kasa \
-             PyYAML \
-             ruamel.yaml \
-             ruamel.yaml.clib \
-             Sphinx \
-             sphinx-rtd-theme
+python3.11 -m pip install matplotlib \
+                          numpy \
+                          pandas \
+                          PyOpenGL \
+                          PyQt6 \
+                          pyqtgraph \
+                          python-kasa \
+                          PyYAML \
+                          ruamel.yaml \
+                          ruamel.yaml.clib \
+                          Sphinx \
+                          sphinx-rtd-theme
 ```
 
 
@@ -135,6 +141,7 @@ brew install gd libcerf pango cairo readline ncurses libcaca pkgconfig wxwidgets
 ./configure LDFLAGS="-L${HBPRE}/opt/readline/lib -L${HBPRE}/opt/ncurses/lib" \
             CPPFLAGS="-I${HBPRE}/opt/readline/include -I${HBPRE}/opt/ncurses/include" \
             --with-readline=gnu \
+            --with-qt=no \
             --prefix="/opt/gnuplot"
 
 # Make and install in /usr/local/bin
