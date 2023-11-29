@@ -34,9 +34,7 @@ eval "$(/opt/homebrew/opt/coreutils/libexec/gnubin/dircolors)"
 
 
 ##### Paths #####
-export PATH="/opt/android:${PATH}"
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/gnuplot/bin:${PATH}"
-# export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 
 
 ##### Functions #####
@@ -49,4 +47,3 @@ function plotex() { # plotex - for creating plots from gnuplot epslatex to pdf
         rm -f $name{-inc.eps,-inc.pdf,.aux,.log} $f
     done
 }
-export HOMEBREW_GITHUB_API_TOKEN=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
