@@ -35,16 +35,8 @@ if [ -f /etc/profile.d/bash_completion.sh ]; then
 fi
 
 
-
-
-
-
-
-
-
-
 ##### Paths #####
-export PATH="${HOME}/miniconda3/bin:$PATH"
+export PATH="/opt/gnuplot/bin:$PATH"
 
 
 ##### Functions #####

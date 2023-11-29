@@ -17,14 +17,15 @@ files and synchronizing them through cloud storage
 
 ## Linux Particulars
 
-### Gnuplot
+### Basic Packages 
 
-The Gnuplot binary that comes packaged with most distros has a buggy readline
-implementation that makes autocomplete totally unusable. It is easy to compile
-from source after installing the necessary software,
+I currently use Debian 12 within the WSL2; Debian would be my choice of distro for a
+traditional installation as well. There are basic system packages that I recommend:
 
 ```sh
-dnf install g++ wxGTK3-devel readline-devel gd-devel libcerf-devel
+apt install vim wget curl tree git gcc gfortran htop bash-completion exiftool imagemagick poppler-utils apt-file
+apt install python3 python3-pip python3-numpy python3-scipy python3-pyqtgraph pylint 
+apt install texlive-full
 ```
 
 which enables the `wxt` interactive terminal within Gnuplot, along with a few
@@ -102,7 +103,7 @@ brew cleanup -s && brew cleanup --prune=all
 ```
 
 
-### Python
+### Python on macOS
 
 Python modules are essential for many tasks now.
 
@@ -122,30 +123,59 @@ python3.11 -m pip install matplotlib \
 ```
 
 
-### Gnuplot
+## Gnuplot
 
-Homebrew can install Gnuplot, the resulting binary has a buggy autocomplete
-functionality that makes it completely unusable. I suggest using `brew` to
-install its dependencies, then manually compile Gnuplot from source. The
-`configure` script should correctly autodetect the dependencies installed with
-`brew`.
+Gnuplot deserves its own section. In general, the Gnuplot binary distributed with most
+package managers (`brew`, `apt`, `yum`, etc.) is sadly deficient; therefore, I recommend
+installing from source. The `configure` script should correctly autodetect the
+dependencies installed via system packages (Linux) or with `brew` (macOS).
 
 ```
-# Homebrew prefix
-HBPRE="$(brew --prefix)"
+if [ $OSTYPE = "Darwin"* ]; then
+    HBPRE="$(brew --prefix)"
+    brew install gd \
+                 libcerf \
+                 pango \
+                 cairo \
+                 readline \
+                 ncurses \
+                 libcaca \
+                 pkgconfig \
+                 wxwidgets \
+                 libsvg-cairo
 
-# Install dependencies
-brew install gd libcerf pango cairo readline ncurses libcaca pkgconfig wxwidgets libsvg-cairo
+    ./configure LDFLAGS="-L${HBPRE}/opt/readline/lib -L${HBPRE}/opt/ncurses/lib" \
+                CPPFLAGS="-I${HBPRE}/opt/readline/include -I${HBPRE}/opt/ncurses/include" \
+                --with-readline=gnu \
+                --with-qt=no \
+                --prefix="/opt/gnuplot"
+elif [ $OSTYPE = "linux-gnu" ]; then
+    sudo apt install -y libgd-dev \
+                        libcerf-dev \
+                        libcairo2-dev \
+                        libpango1.0-dev \
+                        libwxgtk3.2-dev \
+                        libreadline-dev \
+                        libncurses-dev \
+                        cairosvg \
+                        libcaca-dev \
+                        libqt6core6 \
+                        libqt6gui6 \
+                        libqt6network6 \
+                        libqt6svg6 \
+                        libqt6printsupport6 \
+                        libqt6core5compat6 \
+                        qt6-svg-dev \
+                        qt6-5compat-dev \
+                        liblua5.3-dev \
+                        qt6-tools-dev \
+                        lua5.3
 
-# Configure with correct readline and ncurses
-./configure LDFLAGS="-L${HBPRE}/opt/readline/lib -L${HBPRE}/opt/ncurses/lib" \
-            CPPFLAGS="-I${HBPRE}/opt/readline/include -I${HBPRE}/opt/ncurses/include" \
-            --with-readline=gnu \
-            --with-qt=no \
-            --prefix="/opt/gnuplot"
+    ./configure --with-caca --with-readline=gnu --prefix="/opt/gnuplot"
+fi
 
-# Make and install in /usr/local/bin
-make
+# Make and install
+make -j4
 make check
 sudo make install
 ```
