@@ -78,7 +78,6 @@ brew install ack \
              pandoc \
              poppler \
              python \
-             scrcpy \
              tree \
              ttyplot \
              vim \
@@ -89,6 +88,7 @@ brew install ack \
 There are many other tools that I don't use on a regular basis but are also quite useful:
 
 ```
+scrcpy         # android screen sharing for mac
 gifsicle       # handling and optimizing gifs
 lcdf-typetools # dealing with Adobe fonts for LaTeX
 potrace        # creating vector images of signatures
@@ -102,35 +102,50 @@ If you want to remove caches and clean stuff up:
 brew cleanup -s && brew cleanup --prune=all
 ```
 
+and if you want to remove everything and start over, I recommend this:
+
+```sh
+# BE CAREFUL!
+for i in $(brew list); do brew uninstall --ignore-dependencies $i; done
+```
+
 
 ### Python on macOS
 
 Python modules are essential for many tasks now.
 
 ```sh
-python3.11 -m pip install matplotlib \
-                          numpy \
-                          pandas \
-                          PyOpenGL \
-                          PyQt6 \
-                          pyqtgraph \
-                          python-kasa \
-                          PyYAML \
-                          ruamel.yaml \
-                          ruamel.yaml.clib \
-                          Sphinx \
-                          sphinx-rtd-theme
+python3 -m pip install matplotlib \
+                       numpy \
+                       pandas \
+                       PyOpenGL \
+                       PyQt6 \
+                       pyqtgraph \
+                       python-kasa \
+                       PyYAML \
+                       ruamel.yaml \
+                       ruamel.yaml.clib \
+                       Sphinx \
+                       sphinx-rtd-theme
 ```
 
 
 ## Gnuplot
 
-Gnuplot deserves its own section. In general, the Gnuplot binary distributed with most
-package managers (`brew`, `apt`, `yum`, etc.) is sadly deficient; therefore, I recommend
-installing from source. The `configure` script should correctly autodetect the
-dependencies installed via system packages (Linux) or with `brew` (macOS).
+Gnuplot is the greatest graphing tool ever created -- indeed, it is the truly
+the pinnacle of all graphing tools. You would be very wise to listen to me, so I
+am dedicating a section to it. In general, the Gnuplot binary distributed with
+most package managers (`brew`, `apt`, `yum`, etc.) is sadly deficient;
+therefore, I recommend installing from source. The `configure` script should
+correctly autodetect the dependencies installed via system packages (Linux) or
+with `brew` (macOS). You can execute the following script within the Gnuplot
+source directory.
 
 ```
+#!/bin/bash
+export LC_CTYPE=C
+export LANG=C
+
 if [ $OSTYPE = "Darwin"* ]; then
     HBPRE="$(brew --prefix)"
     brew install gd \
@@ -144,9 +159,9 @@ if [ $OSTYPE = "Darwin"* ]; then
                  wxwidgets \
                  libsvg-cairo
 
-    ./configure LDFLAGS="-L${HBPRE}/opt/readline/lib -L${HBPRE}/opt/ncurses/lib" \
-                CPPFLAGS="-I${HBPRE}/opt/readline/include -I${HBPRE}/opt/ncurses/include" \
-                --with-readline=gnu \
+    ./configure LDFLAGS="-L${HBPRE}/opt/ncurses/lib" \
+                CPPFLAGS="-I${HBPRE}/opt/ncurses/include" \
+                --with-readline=${HBPRE}/opt/readline \
                 --with-qt=no \
                 --prefix="/opt/gnuplot"
 elif [ $OSTYPE = "linux-gnu" ]; then
